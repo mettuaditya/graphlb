@@ -1,81 +1,57 @@
 require "./directedgraph.cr"
 
-def dijkstra (graph, source)
+# Dijkstra's algorithm is an algorithm for finding
+# the shortest paths between nodes in a graph,
 
+# Given a graph and source vertex dijkstra function finds
+# the shortest distance from the source vertex to all other
+# vertices in the graph
+
+# returns two hashes, one contains the distance is vetex from the source
+# node whereas, other hash conntains the information about the previous
+# nodes for vertices in the graph
+
+def dijkstra(graph, source)
   vertex_set = [] of Node
-  vertices = graph.get_vertices()
+  vertices = graph.get_vertices
   dist = {} of Node => Float64
-  prev = {} of Node => Node | Nil
+  prev = {} of String => String | Nil
   i = 0
   size = vertices.size
   while i < size
     dist[vertices[i]] = Float64::INFINITY
-    prev[vertices[i]] = nil
+    prev[vertices[i].name] = nil
     vertex_set << vertices[i]
     i = i + 1
   end
   dist[source] = 0.0
 
   while !vertex_set.empty?
-      u = vertex_set.min_by {|n| dist.fetch(n,Float64::INFINITY)}
-      vertex_set.delete(u)
-      u.edges.keys.each do |neighbour|
-        temp = dist[u] + u.edges[neighbour]
-        if temp < dist[neighbour]
-          dist[neighbour] = temp
-          prev[neighbour] = u
-        end
+    u = vertex_set.min_by { |n| dist.fetch(n, Float64::INFINITY) }
+    vertex_set.delete(u)
+    u.edges.keys.each do |neighbour|
+      temp = dist[u] + u.edges[neighbour]
+      if temp < dist[neighbour]
+        dist[neighbour] = temp
+        prev[neighbour.name] = u.name
       end
+    end
   end
-  #puts dist
-  #puts prev
-  return dist,prev
+
+  return dist, prev
 end
-# def dijkstra (graph, source, target)
-#
-#   vertex_set = [] of Node
-#   vertices = graph.get_vertices()
-#   dist = {} of Node => Float64
-#   prev = {} of Node => Node | Nil
-#   i = 0
-#   size = vertices.size
-#   while i < size
-#     dist[vertices[i]] = Float64::INFINITY
-#     prev[vertices[i]] = nil
-#     vertex_set << vertices[i]
-#     i = i + 1
-#   end
-#   dist[source] = 0.0
-#
-#   while !vertex_set.empty?
-#       u = vertex_set.min_by {|n| dist.fetch(n,Float64::INFINITY)}
-#       vertex_set.delete(u)
-#       if u == target
-#         return dist[u],prev
-#       else
-#         u.edges.keys.each do |neighbour|
-#           temp = dist[u] + u.edges[neighbour]
-#           if temp < dist[neighbour]
-#             dist[neighbour] = temp
-#             prev[neighbour] = u
-#           end
-#         end
-#       end
-#   end
-#   return dist[target],prev[target]
-#   #puts dist
-#   #puts prev
-# end
 
-def path_constructor (prev,source,target)
+# constructs a path from source vertex to target vertex
+# Returns the shortest path, if it exists, as an Array of vertices.
 
+def path_constructor(prev, source, target)
   set = [] of String
-  temp = target
-  while (!temp.nil? && temp != source)
-    set.insert(0,temp.name)
+  temp = target.name
+  while (!temp.nil? && temp != source.name)
+    set.insert(0, temp)
     temp = prev[temp]
   end
-  set.insert(0,source.name)
+  set.insert(0, source.name)
   return set
 end
 
@@ -91,13 +67,10 @@ end
 # graph.edge(mid2,stop,7.0)
 # graph.edge(stop,start,3.0)
 # graph.edge(mid1,mid2,0.5)
-# #puts (graph.get_vertices())
 #
 # dist,prev = dijkstra(graph,start)
-# puts stop
-# puts prev[stop]
+# #puts (prev)
 # puts (path_constructor(prev,start,mid2))
-# #puts ("#{dist}-->#{prev}")
 # # dist.keys.each do |i|
-# #   puts "#{i.name} ==> #{dist[i]} ==> #{prev[i]}"
+# #   puts "#{i.name} ==> #{dist[i]} ==> #{prev[i.name]}"
 # # end
