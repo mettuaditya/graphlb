@@ -10,6 +10,11 @@ dependencies:
   delimiter_tree:
     github: mettuaditya/graphlb
 ```
+Then run `crystal deps`
+
+## To Do
+
+Implement different algorithms and Datastructures for Graph
 
 ## Contributors
 
