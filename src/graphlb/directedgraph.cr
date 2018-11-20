@@ -1,10 +1,9 @@
-module graphlb::DirectedGraph
+require "./*"
 
-include graphlb::Node
-
+module Graphlb
   # The Graph class represents a graph with all the vertices and edges
 
-  class Graph
+  class DirectedGraph
     getter vertices
 
     # creats a graph
