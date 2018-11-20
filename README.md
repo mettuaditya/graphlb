@@ -7,15 +7,16 @@ graphlb is a crystal library which contains all the graph datastructures and alg
 Clone repository manually:
 
 ```sh
-$ git clone https://github.com/mettuaditya/graphlb && cd graphlb/```
-
-or add this to your application's `shard.yml`:
+$ git clone https://github.com/mettuaditya/graphlb && cd graphlb/
+```
+or  add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  delimiter_tree:
+  crystalg:
     github: mettuaditya/graphlb
 ```
+
 Then run `crystal deps`
 
 
