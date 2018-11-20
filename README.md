@@ -1,3 +1,4 @@
+![Build Status](https://travis-ci.org/TobiasGSmollett/crystalg.svg?branch=master)
 # graphlb
 graphlb is a library which contains all the graph datastructures and algorithms
 
