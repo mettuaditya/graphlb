@@ -16,7 +16,7 @@ describe Graphlb do
   graph.edge(stop,start,3.0)
   graph.edge(mid1,mid2,0.5)
 
-  dij = Dijkstra.new()
+  dij = Dijkstras.new()
   dist,prev = dij.run(graph,start)
   result = dij.path_constructor(prev,start,mid2)
 
