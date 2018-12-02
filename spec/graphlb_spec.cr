@@ -23,6 +23,6 @@ describe Graphlb do
   ans = ["start", "mid1", "mid2"]
 
   it "works" do
-    True.should eq(result == ans)
+    true.should eq(result == ans)
   end
 end

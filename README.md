@@ -1,20 +1,39 @@
+![Build Status](https://travis-ci.org/TobiasGSmollett/crystalg.svg?branch=master)
 # graphlb
-graphlb is a library which contains all the graph datastructures and algorithms
+graphlb is a crystal library which contains all the graph datastructures and algorithms in crystal-lang.
 
 # Installation
 
-Add this to your application's `shard.yml`:
+Clone repository manually:
+
+```sh
+$ git clone https://github.com/mettuaditya/graphlb && cd graphlb/
+```
+or  add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  delimiter_tree:
+  crystalg:
     github: mettuaditya/graphlb
 ```
+
 Then run `crystal deps`
+
 
 ## To Do
 
-Implement different algorithms and Datastructures for Graph
+* Algorithms
+  * Bellman-ford 
+  * Edmonds-karp
+  * Prims
+  * Breadth-first-search
+  * Depth-first-search
+  * Strongly Connected Components
+  
+* Data-Structues
+  * Binary-search-tree
+  * radix-tree
+  * RB-tree
 
 ## Contributors
 
