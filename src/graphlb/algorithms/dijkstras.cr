@@ -1,18 +1,22 @@
-require "./*"
-include Graphlb
+require "../data_structures/*"
 
-# Dijkstra's algorithm is an algorithm for finding
-# the shortest paths between nodes in a graph,
+include Graphlb::DataStructures
 
-# Given a graph and source vertex dijkstra function finds
-# the shortest distance from the source vertex to all other
-# vertices in the graph
+module Graphlb::Algorithms
 
-# returns two hashes, one contains the distance is vetex from the source
-# node whereas, other hash conntains the information about the previous
-# nodes for vertices in the graph
-module Graphlb
+  # Dijkstra's algorithm is an algorithm for finding
+  # the shortest paths between nodes in a graph,
+  #
+  # Given a graph and source vertex dijkstra function finds
+  # the shortest distance from the source vertex to all other
+  # vertices in the graph
+  #
   class Dijkstras
+    #
+    # returns two hashes, one contains the distance is vetex from the source
+    # node whereas, other hash conntains the information about the previous
+    # nodes for vertices in the graph
+    #
     def run(graph, source)
       vertex_set = [] of Node
       vertices = graph.get_vertices
@@ -45,7 +49,6 @@ module Graphlb
 
     # constructs a path from source vertex to target vertex
     # Returns the shortest path, if it exists, as an Array of vertices.
-
     def path_constructor(prev, source, target)
       set = [] of String
       temp = target.name
