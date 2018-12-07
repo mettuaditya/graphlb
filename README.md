@@ -23,11 +23,10 @@ Then run `crystal deps`
 ## To Do
 
 * Algorithms
-  * Bellman-ford 
   * Edmonds-karp
-  * Prims
-  * Breadth-first-search
-  * Depth-first-search
+  * Floyd-warshall
+  * Ford-Fulkerson
+  * Bipartite-Matching
   * Strongly Connected Components
   
 * Data-Structues
