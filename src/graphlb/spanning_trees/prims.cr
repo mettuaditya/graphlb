@@ -1,7 +1,5 @@
 require "../data_structures/*"
 
-include Graphlb::DataStructures
-
 module Graphlb::Algorithms
   # Prim's algorithm is an algorithm for finding
   # the Minimum spanning tree in a graph, i.e the tree

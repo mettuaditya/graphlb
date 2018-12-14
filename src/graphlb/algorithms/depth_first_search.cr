@@ -1,7 +1,5 @@
 require "../data_structures/*"
 
-include Graphlb::DataStructures
-
 module Graphlb::Algorithms
   # Depth first Search is an algorithm for finding
   # all the vertices that are reachable from  a source,

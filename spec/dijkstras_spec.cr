@@ -22,7 +22,6 @@ describe Graphlb do
     dij = Dijkstras.new()
     dist,prev = dij.run(graph,start)
     result = dij.path_constructor(prev,start,mid2)
-    puts (result)
     ans = ["start", "mid1", "mid2"]
 
     true.should eq(result == ans)
@@ -45,7 +44,6 @@ describe Graphlb do
     dij = Dijkstras.new()
     dist,prev = dij.run(graph,start)
     result = dij.path_constructor(prev,start,stop)
-    puts (result)
     ans = ["start", "mid1", "mid2", "stop"]
 
     true.should eq(result == ans)

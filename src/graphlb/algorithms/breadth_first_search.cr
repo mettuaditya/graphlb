@@ -1,5 +1,5 @@
 require "../data_structures/*"
-include Graphlb::DataStructures
+
 module Graphlb::Algorithms
 
   # Breadth first Search is an algorithm for finding

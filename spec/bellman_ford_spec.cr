@@ -22,7 +22,6 @@ describe Graphlb do
     dij = BellmanFord.new()
     dist,prev = dij.run(graph,start)
     result = dij.path_constructor(prev,start,mid2)
-    puts (result)
     ans = ["start", "mid1", "mid2"]
 
     true.should eq(result == ans)
@@ -44,5 +43,6 @@ describe Graphlb do
 
     dij = BellmanFord.new()
     dist,prev = dij.run(graph,start)
+
   end
 end

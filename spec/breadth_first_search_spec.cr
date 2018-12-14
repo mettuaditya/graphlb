@@ -22,9 +22,9 @@ describe Graphlb do
     dij = BFS.new()
     result= dij.run(graph,start)
     ans = ["start", "mid1", "mid2", "stop"]
-
     true.should eq(result == ans)
   end
+
   it "If graph has two components" do
     graph = DirectedGraph.new()
     start = graph.add_vertex("start")
@@ -43,7 +43,6 @@ describe Graphlb do
     dij = BFS.new()
     result= dij.run(graph,start)
     ans = ["start", "mid1", "mid2", "stop"]
-
     true.should eq(result == ans)
   end
 
