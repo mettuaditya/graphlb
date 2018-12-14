@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.27.0">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
+  <meta id="repository-name" content="github.com/mettuaditya/graphlb">
+  <title>Graphlb::Algorithms::Prims - github.com/mettuaditya/graphlb</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb" data-name="graphlb">
+      <a href="../../Graphlb.html">Graphlb</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms" data-name="graphlb::algorithms">
+      <a href="../../Graphlb/Algorithms.html">Algorithms</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BellmanFord" data-name="graphlb::algorithms::bellmanford">
+      <a href="../../Graphlb/Algorithms/BellmanFord.html">BellmanFord</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BFS" data-name="graphlb::algorithms::bfs">
+      <a href="../../Graphlb/Algorithms/BFS.html">BFS</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/DFS" data-name="graphlb::algorithms::dfs">
+      <a href="../../Graphlb/Algorithms/DFS.html">DFS</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/Dijkstras" data-name="graphlb::algorithms::dijkstras">
+      <a href="../../Graphlb/Algorithms/Dijkstras.html">Dijkstras</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/Prims" data-name="graphlb::algorithms::prims">
+      <a href="../../Graphlb/Algorithms/Prims.html">Prims</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures" data-name="graphlb::datastructures">
+      <a href="../../Graphlb/DataStructures.html">DataStructures</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/DirectedGraph" data-name="graphlb::datastructures::directedgraph">
+      <a href="../../Graphlb/DataStructures/DirectedGraph.html">DirectedGraph</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/Node" data-name="graphlb::datastructures::node">
+      <a href="../../Graphlb/DataStructures/Node.html">Node</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/Queue" data-name="graphlb::datastructures::queue(a)">
+      <a href="../../Graphlb/DataStructures/Queue.html">Queue</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/Stack" data-name="graphlb::datastructures::stack(a)">
+      <a href="../../Graphlb/DataStructures/Stack.html">Stack</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/UnDirectedGraph" data-name="graphlb::datastructures::undirectedgraph">
+      <a href="../../Graphlb/DataStructures/UnDirectedGraph.html">UnDirectedGraph</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Graphlb::Algorithms::Prims
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Graphlb/Algorithms/Prims.html">Graphlb::Algorithms::Prims</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Prim's algorithm is an algorithm for finding
+the Minimum spanning tree in a graph, i.e the tree
+with the lowest weight</p>
+
+<p>Given a graph and source vertex dijkstra function finds
+the shortest distance from the source vertex to all other
+vertices in the graph</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/mettuaditya/graphlb/blob/04cbfa54a1942276505e57f76af1ef1643f8d66e/src/graphlb/spanning_trees/prims.cr#L14" target="_blank">
+        graphlb/spanning_trees/prims.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#path_constructor%28prev%2Csource%2Ctarget%29-instance-method" class="signature"><strong>#path_constructor</strong>(prev, source, target)</a>
+        
+          <div class="summary"><p>constructs a path from source vertex to target vertex Returns the shortest path, if it exists, as an Array of vertices.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#run%28graph%2Csource%29-instance-method" class="signature"><strong>#run</strong>(graph, source)</a>
+        
+          <div class="summary"><p>returns a hashes, which contains the information about the previous vertex of all the vertives present inside the graph </p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="path_constructor(prev,source,target)-instance-method">
+      <div class="signature">
+        
+        def <strong>path_constructor</strong>(prev, source, target)
+
+        <a class="method-permalink" href="#path_constructor%28prev%2Csource%2Ctarget%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>constructs a path from source vertex to target vertex
+Returns the shortest path, if it exists, as an Array of vertices.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/04cbfa54a1942276505e57f76af1ef1643f8d66e/src/graphlb/spanning_trees/prims.cr#L52" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="run(graph,source)-instance-method">
+      <div class="signature">
+        
+        def <strong>run</strong>(graph, source)
+
+        <a class="method-permalink" href="#run%28graph%2Csource%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>returns a hashes, which contains the information about the
+previous vertex of all the vertives present inside the graph</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/04cbfa54a1942276505e57f76af1ef1643f8d66e/src/graphlb/spanning_trees/prims.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
