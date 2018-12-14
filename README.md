@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/TobiasGSmollett/crystalg.svg?branch=master)
+[![Build Status](https://travis-ci.org/mettuaditya/graphlb.svg?branch=master)](https://travis-ci.org/mettuaditya/graphlb)
 # graphlb
 graphlb is a crystal library which contains all the graph datastructures and algorithms in crystal-lang.
 
@@ -23,11 +23,10 @@ Then run `crystal deps`
 ## To Do
 
 * Algorithms
-  * Bellman-ford 
   * Edmonds-karp
-  * Prims
-  * Breadth-first-search
-  * Depth-first-search
+  * Floyd-warshall
+  * Ford-Fulkerson
+  * Bipartite-Matching
   * Strongly Connected Components
   
 * Data-Structues
