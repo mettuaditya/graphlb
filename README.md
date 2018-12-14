@@ -17,7 +17,7 @@ dependencies:
     github: mettuaditya/graphlb
 ```
 
-Then run `crystal deps`
+Then run `shards install`
 
 
 ## To Do
