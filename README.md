@@ -23,16 +23,25 @@ Then run `crystal deps`
 ## To Do
 
 * Algorithms
-  * Edmonds-karp
-  * Floyd-warshall
-  * Ford-Fulkerson
-  * Bipartite-Matching
-  * Strongly Connected Components
+  - [x] Bellman-Ford
+  - [x] Dijkstras
+  - [x] Breadth-First-Search
+  - [x] Depth-First-Search
+  - [x] Prims
+  - [ ] Edmonds-karp
+  - [ ] Floyd-warshall
+  - [ ] Ford-Fulkerson
+  - [ ] Bipartite-Matching
+  - [ ] Strongly Connected Components
   
 * Data-Structues
-  * Binary-search-tree
-  * radix-tree
-  * RB-tree
+  - [x] Directed-Graph
+  - [x] UnDirected-Graph
+  - [x] Queue
+  - [x] Stack
+  - [ ] Binary-search-tree
+  - [ ] Radix-tree
+  - [ ] RB-tree
 
 ## Contributors
 
