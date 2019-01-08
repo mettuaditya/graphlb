@@ -9,10 +9,8 @@ script:
 
 deploy:
   provider: pages
-  keep_history: true
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   on:
-    branch: master 
-    
-  local_dir: docs
+    branch: master
+local_dir: docs
