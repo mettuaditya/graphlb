@@ -50,5 +50,37 @@ module Graphlb::Algorithms
       end
       return visitedQueue.values
     end
+
+    def reachable(graph, source)
+      vertex_set = [] of Node
+      vertices = graph.get_vertices
+      prev = {} of Node => Node | Nil
+      i = 0
+      size = vertices.size
+      while i < size
+        prev[vertices[i]] = nil
+        vertex_set << vertices[i]
+        i = i + 1
+      end
+      prev[source] = source
+      visitedQueue = Stack(String).new
+      queue = Stack(Node).new
+      queue.push(source)
+      while !queue.empty?
+        vertex = queue.pop
+        if vertex.nil?
+          raise "No vertex available in stack"
+        else
+          vertex.edges.keys.each do |neighbour|
+            if (prev[neighbour].nil? && vertex.edges[neighbour] > 0.0)
+              prev[neighbour] = vertex
+              queue.push(neighbour)
+            end
+          end
+        end
+        visitedQueue.push(vertex.name)
+      end
+      return visitedQueue.values,prev
+    end
   end
 end
