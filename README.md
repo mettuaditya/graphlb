@@ -30,9 +30,9 @@ Then run `shards install`
   - [x] Breadth-First-Search
   - [x] Depth-First-Search
   - [x] Prims
-  - [ ] Edmonds-karp
+  - [x] Edmonds-karp
   - [ ] Floyd-warshall
-  - [ ] Ford-Fulkerson
+  - [x] Ford-Fulkerson
   - [ ] Bipartite-Matching
   - [ ] Strongly Connected Components
   
@@ -41,6 +41,7 @@ Then run `shards install`
   - [x] UnDirected-Graph
   - [x] Queue
   - [x] Stack
+  - [x] General-Tree
   - [ ] Binary-search-tree
   - [ ] Radix-tree
   - [ ] RB-tree
