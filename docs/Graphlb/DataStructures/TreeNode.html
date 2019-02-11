@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.27.1">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
+  <meta id="repository-name" content="github.com/mettuaditya/graphlb">
+  <title>Graphlb::DataStructures::TreeNode - github.com/mettuaditya/graphlb</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb" data-name="graphlb">
+      <a href="../../Graphlb.html">Graphlb</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms" data-name="graphlb::algorithms">
+      <a href="../../Graphlb/Algorithms.html">Algorithms</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BellmanFord" data-name="graphlb::algorithms::bellmanford">
+      <a href="../../Graphlb/Algorithms/BellmanFord.html">BellmanFord</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BFS" data-name="graphlb::algorithms::bfs">
+      <a href="../../Graphlb/Algorithms/BFS.html">BFS</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/DFS" data-name="graphlb::algorithms::dfs">
+      <a href="../../Graphlb/Algorithms/DFS.html">DFS</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/Dijkstras" data-name="graphlb::algorithms::dijkstras">
+      <a href="../../Graphlb/Algorithms/Dijkstras.html">Dijkstras</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/EdmondsKarp" data-name="graphlb::algorithms::edmondskarp">
+      <a href="../../Graphlb/Algorithms/EdmondsKarp.html">EdmondsKarp</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/FordFulkerson" data-name="graphlb::algorithms::fordfulkerson">
+      <a href="../../Graphlb/Algorithms/FordFulkerson.html">FordFulkerson</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/Prims" data-name="graphlb::algorithms::prims">
+      <a href="../../Graphlb/Algorithms/Prims.html">Prims</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures" data-name="graphlb::datastructures">
+      <a href="../../Graphlb/DataStructures.html">DataStructures</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/DirectedGraph" data-name="graphlb::datastructures::directedgraph">
+      <a href="../../Graphlb/DataStructures/DirectedGraph.html">DirectedGraph</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/Node" data-name="graphlb::datastructures::node">
+      <a href="../../Graphlb/DataStructures/Node.html">Node</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/Queue" data-name="graphlb::datastructures::queue(a)">
+      <a href="../../Graphlb/DataStructures/Queue.html">Queue</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/Stack" data-name="graphlb::datastructures::stack(a)">
+      <a href="../../Graphlb/DataStructures/Stack.html">Stack</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/TreeNode" data-name="graphlb::datastructures::treenode">
+      <a href="../../Graphlb/DataStructures/TreeNode.html">TreeNode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/UnDirectedGraph" data-name="graphlb::datastructures::undirectedgraph">
+      <a href="../../Graphlb/DataStructures/UnDirectedGraph.html">UnDirectedGraph</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Graphlb::DataStructures::TreeNode
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Graphlb/DataStructures/TreeNode.html">Graphlb::DataStructures::TreeNode</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>TreeNode Class Description</p>
+
+<p>This class models the nodes for an <em>N-ary</em> tree data structure. The
+nodes are <em>named</em>, and have a place-holder for the node data (i.e.,
+<em>content</em> of the node). The node names are required to be <em>unique</em>
+amongst the sibling/peer nodes. Note that the name is implicitly
+used as an <em>ID</em> within the data structure).</p>
+
+<p>The node's <em>content</em> is <em>not</em> required to be unique across
+different nodes in the tree, and can be +nil+ as well.</p>
+
+<p>The class provides various methods to navigate the tree, traverse
+the structure, modify contents of the node, change position of the
+node in the tree, and to make structural changes to the tree.</p>
+
+<p>A node can have any number of <em>child</em> nodes attached to it and
+hence can be used to create N-ary trees.  Access to the child
+nodes can be made in order (with the conventional left to right
+access), or randomly.</p>
+
+<p>The node also provides direct access to its <em>parent</em> node as well
+as other superior parents in the path to root of the tree.  In
+addition, a node can also access its <em>sibling</em> nodes, if present.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L27" target="_blank">
+        graphlb/data_structures/tree.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28name%2Ccontent%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name, content = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Creates a new node with a name and optional content.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#%3C%3C%28child%29-instance-method" class="signature"><strong>#<<</strong>(child)</a>
+        
+          <div class="summary"><p>Convenience synonym for {TreeNode#add} method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%5B%5D%28name_or_index%2Cnum_as_name%3Dfalse%29-instance-method" class="signature"><strong>#[]</strong>(name_or_index, num_as_name = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Returns the requested node from the set of immediate children.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#add%28child%2Cat_index%3D-1%29-instance-method" class="signature"><strong>#add</strong>(child, at_index = <span class="n">-1</span>)</a>
+        
+          <div class="summary"><p>Adds the specified child node to this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#children%3AArray%28Graphlb%3A%3ADataStructures%3A%3ATreeNode%29-instance-method" class="signature"><strong>#children</strong> : Array(Graphlb::DataStructures::TreeNode)</a>
+        
+          <div class="summary"><p>Method oveloading of the children method</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#children%28%26block%29-instance-method" class="signature"><strong>#children</strong>(&block)</a>
+        
+          <div class="summary"><p>An array of all the immediate children of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#content%3AInt32%3F-instance-method" class="signature"><strong>#content</strong> : Int32?</a>
+        
+          <div class="summary"><p>Content of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#content%3D%28content%3AInt32%3F%29-instance-method" class="signature"><strong>#content=</strong>(content : Int32?)</a>
+        
+          <div class="summary"><p>Content of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each%28%26block%29-instance-method" class="signature"><strong>#each</strong>(&block)</a>
+        
+          <div class="summary"><p>Traverses each node (including this node) of the (sub)tree rooted at this node by yielding the nodes to the specified block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each-instance-method" class="signature"><strong>#each</strong></a>
+        
+          <div class="summary"><p>Traverses each node (including this node) of the (sub)tree rooted at this node</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_leaf-instance-method" class="signature"><strong>#each_leaf</strong></a>
+        
+          <div class="summary"><p>Method oveloading of the each_leaf method without block parameter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_leaf%28%26block%29-instance-method" class="signature"><strong>#each_leaf</strong>(&block)</a>
+        
+          <div class="summary"><p>Yields every leaf node of the (sub)tree rooted at this node to the specified block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#first_sibling-instance-method" class="signature"><strong>#first_sibling</strong></a>
+        
+          <div class="summary"><p>First sibling of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#has_children%3F-instance-method" class="signature"><strong>#has_children?</strong></a>
+        
+          <div class="summary"><p>Returns <em>true</em> if the this node has any child node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#has_content%3F-instance-method" class="signature"><strong>#has_content?</strong></a>
+        
+          <div class="summary"><p>Returns <em>true</em> if this node has content.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#in_degree-instance-method" class="signature"><strong>#in_degree</strong></a>
+        
+          <div class="summary"><p>The incoming edge-count of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#insertion_range-instance-method" class="signature"><strong>#insertion_range</strong></a>
+        
+          <div class="summary"><p>Return a range of valid insertion positions.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_first_sibling%3F-instance-method" class="signature"><strong>#is_first_sibling?</strong></a>
+        
+          <div class="summary"><p>Returns <em>true</em> if this node is the first sibling at its level.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_last_sibling%3F-instance-method" class="signature"><strong>#is_last_sibling?</strong></a>
+        
+          <div class="summary"><p>Returns <em>true</em> if this node is the last sibling at its level.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_leaf%3F-instance-method" class="signature"><strong>#is_leaf?</strong></a>
+        
+          <div class="summary"><p>Returns <em>true</em> if this node is a <em>leaf</em> - i.e., one without any children.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_only_child%3F-instance-method" class="signature"><strong>#is_only_child?</strong></a>
+        
+          <div class="summary"><p>Returns <em>true</em> if this node is the only child of its parent.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_root%3F-instance-method" class="signature"><strong>#is_root?</strong></a>
+        
+          <div class="summary"><p>Returns <em>true</em> if this is a root node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lam%28node%2Cprefix%29-instance-method" class="signature"><strong>#lam</strong>(node, prefix)</a>
+        
+          <div class="summary"><p>Helper function for print_tree method to print the tree with given root</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#last_sibling-instance-method" class="signature"><strong>#last_sibling</strong></a>
+        
+          <div class="summary"><p>Last sibling of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
+        
+          <div class="summary"><p>Name of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#next_sibling-instance-method" class="signature"><strong>#next_sibling</strong></a>
+        
+          <div class="summary"><p>Next sibling for this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#node_depth-instance-method" class="signature"><strong>#node_depth</strong></a>
+        
+          <div class="summary"><p>Depth of this node in its tree.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#node_height-instance-method" class="signature"><strong>#node_height</strong></a>
+        
+          <div class="summary"><p>Height of the (sub)tree from this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#out_degree-instance-method" class="signature"><strong>#out_degree</strong></a>
+        
+          <div class="summary"><p>The outgoing edge-count of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parent%3ATreeNode%3F-instance-method" class="signature"><strong>#parent</strong> : TreeNode?</a>
+        
+          <div class="summary"><p>Parent of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parent%3D%28parent%29-instance-method" class="signature"><strong>#parent=</strong>(parent)</a>
+        
+          <div class="summary"><p>Method to set the parent node for this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parentage-instance-method" class="signature"><strong>#parentage</strong></a>
+        
+          <div class="summary"><p>An array of ancestors of this node in reversed order (the first element is the immediate parent of this node).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#previous_sibling-instance-method" class="signature"><strong>#previous_sibling</strong></a>
+        
+          <div class="summary"><p>Previous sibling of this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#print_tree%28level%3Dself.node_depth%2Cmax_depth%3Dnil%29-instance-method" class="signature"><strong>#print_tree</strong>(level = <span class="k">self</span>.node_depth, max_depth = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Pretty prints the (sub)tree rooted at this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#remove%21%28child%29-instance-method" class="signature"><strong>#remove!</strong>(child)</a>
+        
+          <div class="summary"><p>Removes the specified child node from this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#remove_from_parent%21-instance-method" class="signature"><strong>#remove_from_parent!</strong></a>
+        
+          <div class="summary"><p>Removes this node from its parent.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rename%28new_name%29-instance-method" class="signature"><strong>#rename</strong>(new_name)</a>
+        
+          <div class="summary"><p>Renames the node and updates the parent's reference to it</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#replace%21%28old_child%2Cnew_child%29-instance-method" class="signature"><strong>#replace!</strong>(old_child, new_child)</a>
+        
+          <div class="summary"><p>Replaces the specified child node with another child node on this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#replace_with%28node%29-instance-method" class="signature"><strong>#replace_with</strong>(node)</a>
+        
+          <div class="summary"><p>Replaces the node with another node</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#root-instance-method" class="signature"><strong>#root</strong></a>
+        
+          <div class="summary"><p>Root node for the (sub)tree to which this node belongs.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_as_root%21-instance-method" class="signature"><strong>#set_as_root!</strong></a>
+        
+          <div class="summary"><p>Method to set this node as a root node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#siblings-instance-method" class="signature"><strong>#siblings</strong></a>
+        
+          <div class="summary"><p>An array of siblings for this node.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(name,content=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(name, content = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28name%2Ccontent%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new node with a name and optional content.
+The node name is expected to be unique within the tree.</p>
+
+<p>The content can be of type Int32, and defaults to +nil+.</p>
+
+<p>@param [Object] name Name of the node. Conventional usage is to pass a
+  String</p>
+
+<p>@param [Object] content Content of the node.</p>
+
+<p>@raise [ArgumentError] Raised if the node name is empty.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L54" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="&lt;&lt;(child)-instance-method">
+      <div class="signature">
+        
+        def <strong><<</strong>(child)
+
+        <a class="method-permalink" href="#%3C%3C%28child%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Convenience synonym for {TreeNode#add} method.</p>
+
+<p>This method allows an easy mechanism to add node hierarchies to the tree
+on a given path via chaining the method calls to successive child nodes.</p>
+
+<p>@example Add a child and grand-child to the root
+  root &lt;&lt; child &lt;&lt; grand_child</p>
+
+<p>@param [TreeNode] child the child node to add.</p>
+
+<p>@return [TreeNode] The added child node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L208" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="[](name_or_index,num_as_name=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>[]</strong>(name_or_index, num_as_name = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#%5B%5D%28name_or_index%2Cnum_as_name%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns the requested node from the set of immediate children.</p>
+
+<ul><li>If the +name+ argument is an <em>Integer</em>, then the in-sequence
+  array of children is accessed using the argument as the
+  <em>index</em> (zero-based).  However, if the second <em>optional</em>
+  +num_as_name+ argument is +true+, then the +name+ is used
+  literally as a name, and <em>NOT</em> as an <em>index</em></li></ul>
+
+<ul><li>If the +name+ argument is <em>NOT</em> an <em>Integer</em>, then it is taken to
+  be the <em>name</em> of the child node to be returned.</li></ul>
+
+<p>If a non-+Integer+ +name+ is passed, and the +num_as_name+
+parameter is also +true+, then a warning is thrown (as this is a
+redundant use of the +num_as_name+ flag.)</p>
+
+<p>@param [String|Number] name_or_index Name of the child, or its
+  positional index in the array of child nodes.</p>
+
+<p>@param [Boolean] num_as_name Whether to treat the +Integer+
+  +name+ argument as an actual name, and <em>NOT</em> as an <em>index</em> to
+  the children array.</p>
+
+<p>@return [TreeNode] the requested child node.  If the index
+  in not in range, or the name is not present, then a +nil+
+  is returned.</p>
+
+<p>@raise [Error] Raised if the +name_or_index+ argument is +nil+.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L133" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="add(child,at_index=-1)-instance-method">
+      <div class="signature">
+        
+        def <strong>add</strong>(child, at_index = <span class="n">-1</span>)
+
+        <a class="method-permalink" href="#add%28child%2Cat_index%3D-1%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds the specified child node to this node.</p>
+
+<p>This method can also be used for <em>grafting</em> a subtree into this
+node's tree, if the specified child node is the root of a subtree (i.e.,
+has child nodes under it).</p>
+
+<p>this node becomes parent of the node passed in as the argument, and
+the child is added as the last child ("right most") in the current set of
+children of this node</p>
+
+<p>@param [TreeNode] child The child node to add.</p>
+
+<p>@param [optional, Number] at_index The optional position where the node is to be inserted.</p>
+
+<p>@return [TreeNode] The added child node.</p>
+
+<p>@raise [Error]  This exception is raised if another child node with the same name exists, or if an invalid insertion position is specified.</p>
+
+<p>@raise [Error]  This exception is raised if a +nil+ node is passed as the argument.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L232" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="children:Array(Graphlb::DataStructures::TreeNode)-instance-method">
+      <div class="signature">
+        
+        def <strong>children</strong> : Array(<a href="../../Graphlb/DataStructures/TreeNode.html">Graphlb::DataStructures::TreeNode</a>)
+
+        <a class="method-permalink" href="#children%3AArray%28Graphlb%3A%3ADataStructures%3A%3ATreeNode%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Method oveloading of the children method</p>
+
+<p>An array of all the immediate children of this node. The child
+nodes are ordered "left-to-right" in the returned array.</p>
+
+<p>@return [Array&lt;TreeNode>] An array of the child nodes.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L459" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="children(&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>children</strong>(&block)
+
+        <a class="method-permalink" href="#children%28%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>An array of all the immediate children of this node. The child
+nodes are ordered "left-to-right" in the returned array.</p>
+
+<p>@param [object] block</p>
+
+<p>@yieldparam child [TreeNode] Each child node.</p>
+
+<p>@return [TreeNode] This node</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L448" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="content:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>content</strong> : Int32?
+
+        <a class="method-permalink" href="#content%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Content of this node.  Can be +nil+.  Note that there is no
+uniqueness constraint related to this attribute.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="content=(content:Int32?)-instance-method">
+      <div class="signature">
+        
+        def <strong>content=</strong>(content : Int32?)
+
+        <a class="method-permalink" href="#content%3D%28content%3AInt32%3F%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Content of this node.  Can be +nil+.  Note that there is no
+uniqueness constraint related to this attribute.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L47" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each(&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>each</strong>(&block)
+
+        <a class="method-permalink" href="#each%28%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Traverses each node (including this node) of the (sub)tree rooted at this
+node by yielding the nodes to the specified block.</p>
+
+<p>The traversal is <em>depth-first</em> and from <em>left-to-right</em> in pre-ordered
+sequence.</p>
+
+<p>@param [Object] block</p>
+
+<p>@yieldparam node [TreeNode] Each node.</p>
+
+<p>@return [TreeNode] this node</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L415" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each-instance-method">
+      <div class="signature">
+        
+        def <strong>each</strong>
+
+        <a class="method-permalink" href="#each-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Traverses each node (including this node) of the (sub)tree rooted at this
+node</p>
+
+<p>@return [Enumerator] an enumerator on this tree</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L435" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_leaf-instance-method">
+      <div class="signature">
+        
+        def <strong>each_leaf</strong>
+
+        <a class="method-permalink" href="#each_leaf-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Method oveloading of the each_leaf method without block parameter</p>
+
+<p>@return [Array&lt;TreeNode>] An array of the leaf nodes</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L483" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_leaf(&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_leaf</strong>(&block)
+
+        <a class="method-permalink" href="#each_leaf%28%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Yields every leaf node of the (sub)tree rooted at this node to the
+specified block.</p>
+
+<p>May yield this node as well if this is a leaf node.
+Leaf traversal is <em>depth-first</em> and <em>left-to-right</em>.</p>
+
+<p>@param [Object] block</p>
+
+<p>@yieldparam node [TreeNode] Each leaf node.</p>
+
+<p>@return [TreeNode] this node,</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L474" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="first_sibling-instance-method">
+      <div class="signature">
+        
+        def <strong>first_sibling</strong>
+
+        <a class="method-permalink" href="#first_sibling-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>First sibling of this node. If this is the root node, then returns
+itself.</p>
+
+<p>'First' sibling is defined as follows:</p>
+
+<p>First sibling:: The left-most child of this node's parent, which may be
+this node itself</p>
+
+<p>@return [TreeNode] The first sibling node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L334" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="has_children?-instance-method">
+      <div class="signature">
+        
+        def <strong>has_children?</strong>
+
+        <a class="method-permalink" href="#has_children%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns <em>true</em> if the this node has any child node.</p>
+
+<p>@return [Boolean] +true+ if child nodes exist.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L321" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="has_content?-instance-method">
+      <div class="signature">
+        
+        def <strong>has_content?</strong>
+
+        <a class="method-permalink" href="#has_content%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns <em>true</em> if this node has content.</p>
+
+<p>@return [Boolean] +true+ if the node has content.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L304" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="in_degree-instance-method">
+      <div class="signature">
+        
+        def <strong>in_degree</strong>
+
+        <a class="method-permalink" href="#in_degree-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The incoming edge-count of this node.</p>
+
+<p>In-degree is defined as:
+In-degree:: Number of edges arriving at the node (0 for root, 1 for
+all other nodes)</p>
+
+<ul><li>In-degree = 0 for a root or orphaned node</li><li>In-degree = 1 for a node which has a parent</li></ul>
+
+<p>@return [Integer] The in-degree of this node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L536" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="insertion_range-instance-method">
+      <div class="signature">
+        
+        def <strong>insertion_range</strong>
+
+        <a class="method-permalink" href="#insertion_range-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Return a range of valid insertion positions.  Used in the #add method.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L250" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_first_sibling?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_first_sibling?</strong>
+
+        <a class="method-permalink" href="#is_first_sibling%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns <em>true</em> if this node is the first sibling at its level.</p>
+
+<p>@return [Boolean] <em>true</em> if this is the first sibling.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L342" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_last_sibling?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_last_sibling?</strong>
+
+        <a class="method-permalink" href="#is_last_sibling%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns <em>true</em> if this node is the last sibling at its level.</p>
+
+<p>@return [Boolean] +true+ if this is the last sibling.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L362" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_leaf?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_leaf?</strong>
+
+        <a class="method-permalink" href="#is_leaf%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns <em>true</em> if this node is a <em>leaf</em> - i.e., one without
+any children.</p>
+
+<p>@return [Boolean] +true+ if this is a leaf node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L313" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_only_child?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_only_child?</strong>
+
+        <a class="method-permalink" href="#is_only_child%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns <em>true</em> if this node is the only child of its parent.</p>
+
+<p>As a special case, a root node will always return +true+.</p>
+
+<p>@return [Boolean] +true+ if this is the only child of its parent.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L371" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_root?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_root?</strong>
+
+        <a class="method-permalink" href="#is_root%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns <em>true</em> if this is a root node.  Note that
+orphaned children will also be reported as root nodes.</p>
+
+<p>@return [Boolean] +true+ if this is a root node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L297" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lam(node,prefix)-instance-method">
+      <div class="signature">
+        
+        def <strong>lam</strong>(node, prefix)
+
+        <a class="method-permalink" href="#lam%28node%2Cprefix%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Helper function for print_tree method to print the
+tree with given root</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L552" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="last_sibling-instance-method">
+      <div class="signature">
+        
+        def <strong>last_sibling</strong>
+
+        <a class="method-permalink" href="#last_sibling-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Last sibling of this node.  If this is the root node, then returns
+itself.</p>
+
+<p>'Last' sibling is defined as follows:</p>
+
+<p>Last sibling:: The right-most child of this node's parent, which may be
+this node itself</p>
+
+<p>@return [TreeNode] The last sibling node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L355" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>name</strong> : String
+
+        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Name of this node.  Expected to be unique within the tree.</p>
+
+<p>Note that the name attribute really functions as an <em>ID</em> within
+the tree structure, and hence the uniqueness constraint is
+required.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="next_sibling-instance-method">
+      <div class="signature">
+        
+        def <strong>next_sibling</strong>
+
+        <a class="method-permalink" href="#next_sibling-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Next sibling for this node.
+The <em>next</em> node is defined as the node to right of this node.</p>
+
+<p>Will return +nil+ if no subsequent node is present, or if this is a root
+node.</p>
+
+<p>@return [treeNode] the next sibling node, if present.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L382" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="node_depth-instance-method">
+      <div class="signature">
+        
+        def <strong>node_depth</strong>
+
+        <a class="method-permalink" href="#node_depth-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Depth of this node in its tree.  Depth of a node is defined as:</p>
+
+<p>Depth:: Length of the node's path to its root. Depth of a root node is
+zero.</p>
+
+<p>@return [Integer] Depth of this node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L521" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="node_height-instance-method">
+      <div class="signature">
+        
+        def <strong>node_height</strong>
+
+        <a class="method-permalink" href="#node_height-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Height of the (sub)tree from this node.  Height of a node is defined as:</p>
+
+<p>Height:: Length of the longest downward path to a leaf from the node.</p>
+
+<ul><li>Height from a root node is height of the entire tree.</li><li>The height of a leaf node is zero.</li></ul>
+
+<p>@return [Integer] Height of the node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L510" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="out_degree-instance-method">
+      <div class="signature">
+        
+        def <strong>out_degree</strong>
+
+        <a class="method-permalink" href="#out_degree-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The outgoing edge-count of this node.</p>
+
+<p>Out-degree is defined as:
+Out-degree:: Number of edges leaving the node (zero for leafs)</p>
+
+<p>@return [Integer] The out-degree of this node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L546" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parent:TreeNode?-instance-method">
+      <div class="signature">
+        
+        def <strong>parent</strong> : <a href="../../Graphlb/DataStructures/TreeNode.html">TreeNode</a>?
+
+        <a class="method-permalink" href="#parent%3ATreeNode%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Parent of this node.  Will be +nil+ for a root node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parent=(parent)-instance-method">
+      <div class="signature">
+        
+        def <strong>parent=</strong>(parent)
+
+        <a class="method-permalink" href="#parent%3D%28parent%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Method to set the parent node for this node.
+This method should <em>NOT</em> be invoked by client code.</p>
+
+<p>@param [TreeNode] parent The parent node.</p>
+
+<p>@return [TreeNode] The parent node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L180" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parentage-instance-method">
+      <div class="signature">
+        
+        def <strong>parentage</strong>
+
+        <a class="method-permalink" href="#parentage-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>An array of ancestors of this node in reversed order
+(the first element is the immediate parent of this node).</p>
+
+<p>Returns +nil+ if this is a root node.</p>
+
+<p>@return [Array&lt;TreeNode>] An array of ancestors of this node
+@return [nil] if this is a root node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L79" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="previous_sibling-instance-method">
+      <div class="signature">
+        
+        def <strong>previous_sibling</strong>
+
+        <a class="method-permalink" href="#previous_sibling-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Previous sibling of this node.
+<em>Previous</em> node is defined to be the node to left of this node.</p>
+
+<p>Will return +nil+ if no predecessor node is present, or if this is a root
+node.</p>
+
+<p>@return [treeNode] the previous sibling node, if present.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L396" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="print_tree(level=self.node_depth,max_depth=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>print_tree</strong>(level = <span class="k">self</span>.node_depth, max_depth = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#print_tree%28level%3Dself.node_depth%2Cmax_depth%3Dnil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pretty prints the (sub)tree rooted at this node.</p>
+
+<p>@param [Integer] level The indentation level (4 spaces) to start with.
+@param [Integer] max_depth optional maximum depth at which the printing</p>
+
+<pre><code>                       <span class="k">with</span> stop.</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L561" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="remove!(child)-instance-method">
+      <div class="signature">
+        
+        def <strong>remove!</strong>(child)
+
+        <a class="method-permalink" href="#remove%21%28child%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Removes the specified child node from this node.</p>
+
+<p>This method can also be used for <em>pruning</em> a sub-tree, in cases where the removed child node is
+the root of the sub-tree to be pruned.</p>
+
+<p>The removed child node is orphaned but accessible if an alternate reference exists.  If accessible via
+an alternate reference, the removed child will report itself as a root node for its sub-tree.</p>
+
+<p>@param [TreeNode] child The child node to remove.</p>
+
+<p>@return [TreeNode] The removed child node, or +nil+ if a +nil+ was passed in as argument.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L285" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="remove_from_parent!-instance-method">
+      <div class="signature">
+        
+        def <strong>remove_from_parent!</strong>
+
+        <a class="method-permalink" href="#remove_from_parent%21-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Removes this node from its parent. This node becomes the new root for its
+subtree.</p>
+
+<p>If this is the root node, then does nothing.</p>
+
+<p>@return [TreeNode] +self+ (the removed node) if the operation is</p>
+
+<pre><code>                           successful, <span class="o">+</span><span class="n">nil</span><span class="o">+</span> otherwise.</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L192" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rename(new_name)-instance-method">
+      <div class="signature">
+        
+        def <strong>rename</strong>(new_name)
+
+        <a class="method-permalink" href="#rename%28new_name%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Renames the node and updates the parent's reference to it</p>
+
+<p>@param [Object] new_name Name of the node. Conventional usage is to pass a</p>
+
+<pre><code>                     <span class="t">String</span> (<span class="t">Integer</span> names may cause <span class="o">*</span>surprises<span class="o">*</span>)</code></pre>
+
+<p>@return [Object] The old name</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L262" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="replace!(old_child,new_child)-instance-method">
+      <div class="signature">
+        
+        def <strong>replace!</strong>(old_child, new_child)
+
+        <a class="method-permalink" href="#replace%21%28old_child%2Cnew_child%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Replaces the specified child node with another child node on this node.</p>
+
+<p>@param [TreeNode] old_child The child node to be replaced.
+@param [TreeNode] new_child The child node to be replaced with.</p>
+
+<p>@return [TreeNode] The removed child node</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L97" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="replace_with(node)-instance-method">
+      <div class="signature">
+        
+        def <strong>replace_with</strong>(node)
+
+        <a class="method-permalink" href="#replace_with%28node%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Replaces the node with another node</p>
+
+<p>@param [TreeNode] node The node to replace this node with</p>
+
+<p>@return [TreeNode] The replaced child node</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L151" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="root-instance-method">
+      <div class="signature">
+        
+        def <strong>root</strong>
+
+        <a class="method-permalink" href="#root-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Root node for the (sub)tree to which this node belongs.
+A root node's root is itself.</p>
+
+<p>@return [TreeNode] Root of the (sub)tree.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L159" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_as_root!-instance-method">
+      <div class="signature">
+        
+        def <strong>set_as_root!</strong>
+
+        <a class="method-permalink" href="#set_as_root%21-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Method to set this node as a root node.</p>
+
+<p>@return +nil+.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L170" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="siblings-instance-method">
+      <div class="signature">
+        
+        def <strong>siblings</strong>
+
+        <a class="method-permalink" href="#siblings-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>An array of siblings for this node. This node is excluded.</p>
+
+<p>@return [Array&lt;TreeNode>] Array of siblings of this node. Will return an empty array for <em>root</em></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/data_structures/tree.cr#L491" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

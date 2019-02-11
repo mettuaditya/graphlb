@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/mettuaditya/graphlb">
-  <title>Graphlb::Algorithms::BellmanFord - github.com/mettuaditya/graphlb</title>
+  <title>Graphlb::Algorithms::FordFulkerson - github.com/mettuaditya/graphlb</title>
 </head>
 <body>
 
@@ -46,7 +46,7 @@
       
         <ul>
   
-  <li class=" current" data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BellmanFord" data-name="graphlb::algorithms::bellmanford">
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BellmanFord" data-name="graphlb::algorithms::bellmanford">
       <a href="../../Graphlb/Algorithms/BellmanFord.html">BellmanFord</a>
       
     </li>
@@ -71,7 +71,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/FordFulkerson" data-name="graphlb::algorithms::fordfulkerson">
+  <li class=" current" data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/FordFulkerson" data-name="graphlb::algorithms::fordfulkerson">
       <a href="../../Graphlb/Algorithms/FordFulkerson.html">FordFulkerson</a>
       
     </li>
@@ -140,25 +140,15 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Graphlb::Algorithms::BellmanFord
+  <span class="kind">class</span> Graphlb::Algorithms::FordFulkerson
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Graphlb/Algorithms/BellmanFord.html">Graphlb::Algorithms::BellmanFord</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Graphlb/Algorithms/FordFulkerson.html">Graphlb::Algorithms::FordFulkerson</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
-
-  <h2>Overview</h2>
-
-  <p>Bellman Ford's algorithm is an algorithm for finding
-the shortest paths between nodes in a graph,</p>
-
-<p>Given a graph and source vertex Bellman Fords algorithm finds
-the shortest distance from the source vertex to all other
-vertices in the graph.
-It also finds wheather a negative cycle is prsent in a graph or not</p>
 
 
 
@@ -176,8 +166,8 @@ It also finds wheather a negative cycle is prsent in a graph or not</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/algorithms/bellman_ford.cr#L11" target="_blank">
-        graphlb/algorithms/bellman_ford.cr
+      <a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/algorithms/ford_fulkerson.cr#L6" target="_blank">
+        graphlb/algorithms/ford_fulkerson.cr
       </a>
     
     <br/>
@@ -195,16 +185,7 @@ It also finds wheather a negative cycle is prsent in a graph or not</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#path_constructor%28prev%2Csource%2Ctarget%29-instance-method" class="signature"><strong>#path_constructor</strong>(prev, source, target)</a>
-        
-          <div class="summary"><p>constructs a path from source vertex to target vertex Returns the shortest path, if it exists, as an Array of vertices.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#run%28graph%2Csource%29-instance-method" class="signature"><strong>#run</strong>(graph, source)</a>
-        
-          <div class="summary"><p>returns two hashes, one contains the distance is vetex from the source node whereas, other hash conntains the information about the previous nodes for vertices in the graph </p></div>
+        <a href="#run%28graph%2Csource%2Csink%29-instance-method" class="signature"><strong>#run</strong>(graph, source, sink)</a>
         
       </li>
     
@@ -245,41 +226,18 @@ It also finds wheather a negative cycle is prsent in a graph or not</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="path_constructor(prev,source,target)-instance-method">
+    <div class="entry-detail" id="run(graph,source,sink)-instance-method">
       <div class="signature">
         
-        def <strong>path_constructor</strong>(prev, source, target)
+        def <strong>run</strong>(graph, source, sink)
 
-        <a class="method-permalink" href="#path_constructor%28prev%2Csource%2Ctarget%29-instance-method">#</a>
+        <a class="method-permalink" href="#run%28graph%2Csource%2Csink%29-instance-method">#</a>
       </div>
-      
-        <div class="doc"><p>constructs a path from source vertex to target vertex
-Returns the shortest path, if it exists, as an Array of vertices.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/algorithms/bellman_ford.cr#L56" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="run(graph,source)-instance-method">
-      <div class="signature">
-        
-        def <strong>run</strong>(graph, source)
-
-        <a class="method-permalink" href="#run%28graph%2Csource%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>returns two hashes, one contains the distance is vetex from the source
-node whereas, other hash conntains the information about the previous
-nodes for vertices in the graph</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/algorithms/bellman_ford.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/72b0a9888b651b75086c46df15988ecb5d0a0984/src/graphlb/algorithms/ford_fulkerson.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
