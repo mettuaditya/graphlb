@@ -22,7 +22,7 @@ dependencies:
 Then run `shards install`
 
 
-## To Do
+# To Do
 
 * Algorithms
   - [x] Bellman-Ford
@@ -35,7 +35,7 @@ Then run `shards install`
   - [x] Ford-Fulkerson
   - [ ] Bipartite-Matching
   - [ ] Strongly Connected Components
-  
+
 * Data-Structues
   - [x] Directed-Graph
   - [x] UnDirected-Graph
