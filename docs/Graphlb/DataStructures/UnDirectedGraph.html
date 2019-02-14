@@ -91,6 +91,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/BinaryTreeNode" data-name="graphlb::datastructures::binarytreenode">
+      <a href="../../Graphlb/DataStructures/BinaryTreeNode.html">BinaryTreeNode</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/DirectedGraph" data-name="graphlb::datastructures::directedgraph">
       <a href="../../Graphlb/DataStructures/DirectedGraph.html">DirectedGraph</a>
       
@@ -152,7 +157,12 @@
 
   <h2>Overview</h2>
 
-  <p>The UnDirectedGraph class represents a graph with all the vertices and undirectededges</p>
+  <p>An undirected graph is a graph that is made up of a set of vertices connected by edges,
+where the edges have a not direction and weight are associated with the edges.</p>
+
+<p>The class provides various methods which can be used to define/modify a simple undirected graph with edge-weight
+Associated to each edge. Here we are using the adjacency list approach to define a undirected graph which
+can be modified later as per convience</p>
 
 
 
@@ -170,7 +180,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/undirectedgraph.cr#L5" target="_blank">
+      <a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/undirectedgraph.cr#L11" target="_blank">
         graphlb/data_structures/undirectedgraph.cr
       </a>
     
@@ -187,7 +197,7 @@
       <li class="entry-summary">
         <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>creats a graph</p></div>
+          <div class="summary"><p>creats a graph whith no vertices and edges(empty-graph)</p></div>
         
       </li>
     
@@ -203,14 +213,14 @@
       <li class="entry-summary">
         <a href="#add_edge%28from_node%3ANode%2Cto_node%3ANode%2Cweight%29-instance-method" class="signature"><strong>#add_edge</strong>(from_node : Node, to_node : Node, weight)</a>
         
-          <div class="summary"><p>Add edges to the graph from the from_node to to_node with a given edge_weight</p></div>
+          <div class="summary"><p>Creates an edge between the nodes provided as the parametes.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#add_vertex%28name%29-instance-method" class="signature"><strong>#add_vertex</strong>(name)</a>
         
-          <div class="summary"><p>Add nodes to the graph with the given name</p></div>
+          <div class="summary"><p>Creates a new vertex with in the graph.</p></div>
         
       </li>
     
@@ -230,6 +240,8 @@
     
       <li class="entry-summary">
         <a href="#vertices%3AArray%28Graphlb%3A%3ADataStructures%3A%3ANode%29-instance-method" class="signature"><strong>#vertices</strong> : Array(Graphlb::DataStructures::Node)</a>
+        
+          <div class="summary"><p>All the vertices of the graph are stored in this variables</p></div>
         
       </li>
     
@@ -274,12 +286,12 @@
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>creats a graph</p></div>
+        <div class="doc"><p>creats a graph whith no vertices and edges(empty-graph)</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/undirectedgraph.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/undirectedgraph.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -299,12 +311,24 @@
         <a class="method-permalink" href="#add_edge%28from_node%3ANode%2Cto_node%3ANode%2Cweight%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Add edges to the graph from the from_node to to_node with a given edge_weight</p></div>
+        <div class="doc"><p>Creates an edge between the nodes provided as the parametes.</p>
+
+<p>If the form_node and to_node_ are same then also the node is created witha cycle in the graph.</p>
+
+<p>If any of the from_node or to_node is not found in the graph a exception is raised.</p>
+
+<p>@param : from_node</p>
+
+<p>@param : to_node</p>
+
+<p>@param : weight, the weight of the edge created</p>
+
+<p>@return : the list of all edges of the from_node</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/undirectedgraph.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/undirectedgraph.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -317,12 +341,19 @@
         <a class="method-permalink" href="#add_vertex%28name%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Add nodes to the graph with the given name</p></div>
+        <div class="doc"><p>Creates a new vertex with in the graph.</p>
+
+<p>The vertex name is expected to be unique to differentiate between the vertex within the graph
+and perform operations on them.</p>
+
+<p>@param [String] name, to define the name of the vertex hwich is expected to be unique.</p>
+
+<p>@return [Vertex] newly created node.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/undirectedgraph.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/undirectedgraph.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -335,12 +366,14 @@
         <a class="method-permalink" href="#get_vertices-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>returns informaton about all the vertices inside the graph</p></div>
+        <div class="doc"><p>returns informaton about all the vertices inside the graph</p>
+
+<p>@return : list of all vertices/nodes in the graph</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/undirectedgraph.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/undirectedgraph.cr#L91" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -353,12 +386,25 @@
         <a class="method-permalink" href="#remove_edge%28from_node%3ANode%2Cto_node%3ANode%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Removes the edge form the from_node to the to_node present in the graph</p></div>
+        <div class="doc"><p>Removes the edge form the from_node to the to_node present in the graph</p>
+
+<p>If the form_node and to_node_ are same and the edge is present between them the edge is removed
+else excetion is raised</p>
+
+<p>If any of the from_node or to_node is not found in the graph a exception is raised.</p>
+
+<p>If edge between the from_node and the to_node is not found in the graph a exception is raised</p>
+
+<p>@param : from_node.</p>
+
+<p>@param : to_node.</p>
+
+<p>@return : list of all edges from the from node</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/undirectedgraph.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/undirectedgraph.cr#L73" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -371,10 +417,12 @@
         <a class="method-permalink" href="#vertices%3AArray%28Graphlb%3A%3ADataStructures%3A%3ANode%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>All the vertices of the graph are stored in this variables</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/undirectedgraph.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/undirectedgraph.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>

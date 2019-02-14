@@ -91,6 +91,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/BinaryTreeNode" data-name="graphlb::datastructures::binarytreenode">
+      <a href="../../Graphlb/DataStructures/BinaryTreeNode.html">BinaryTreeNode</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/DirectedGraph" data-name="graphlb::datastructures::directedgraph">
       <a href="../../Graphlb/DataStructures/DirectedGraph.html">DirectedGraph</a>
       
@@ -152,8 +157,11 @@
 
   <h2>Overview</h2>
 
-  <p>A stack Data Structure formed using an Array
-A stack follows Last-in-First-out</p>
+  <p>In crystal, elements in an array are added in dynamics fashion means
+the size of the array is not fixed which makes them quite similar
+to linked list.</p>
+
+<p>Here we have implemanted the stack data-structure using an array.A stack follows Last-in-First-out.</p>
 
 
 
@@ -171,7 +179,7 @@ A stack follows Last-in-First-out</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/stack.cr#L4" target="_blank">
+      <a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/stack.cr#L8" target="_blank">
         graphlb/data_structures/stack.cr
       </a>
     
@@ -188,7 +196,7 @@ A stack follows Last-in-First-out</p>
       <li class="entry-summary">
         <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Initializes the stack with empty</p></div>
+          <div class="summary"><p>Initializes the stack with empty Array</p></div>
         
       </li>
     
@@ -225,7 +233,7 @@ A stack follows Last-in-First-out</p>
       <li class="entry-summary">
         <a href="#top-instance-method" class="signature"><strong>#top</strong></a>
         
-          <div class="summary"><p>returns the top-most element in the stack</p></div>
+          <div class="summary"><p>returns the top-most element in the stack without deleting it.</p></div>
         
       </li>
     
@@ -277,12 +285,12 @@ A stack follows Last-in-First-out</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Initializes the stack with empty</p></div>
+        <div class="doc"><p>Initializes the stack with empty Array</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/stack.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/stack.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -307,7 +315,7 @@ A stack follows Last-in-First-out</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/stack.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/stack.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -320,12 +328,14 @@ A stack follows Last-in-First-out</p>
         <a class="method-permalink" href="#pop-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>pops the value that is last inserted</p></div>
+        <div class="doc"><p>pops the value that is last inserted</p>
+
+<p>@return : last element inserted</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/stack.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/stack.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -338,12 +348,16 @@ A stack follows Last-in-First-out</p>
         <a class="method-permalink" href="#push%28val%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>pushes the value present inside the val into the stack</p></div>
+        <div class="doc"><p>pushes the value present inside the val into the stack</p>
+
+<p>@param : val , the value we want to append into the stack</p>
+
+<p>@return : returns the array of elements in the stack</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/stack.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/stack.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -356,12 +370,12 @@ A stack follows Last-in-First-out</p>
         <a class="method-permalink" href="#top-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>returns the top-most element in the stack</p></div>
+        <div class="doc"><p>returns the top-most element in the stack without deleting it.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/stack.cr#L22" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/stack.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -379,7 +393,7 @@ A stack follows Last-in-First-out</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/stack.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/stack.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>

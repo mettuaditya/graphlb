@@ -1,4 +1,5 @@
-require "../data_structures/*"
+require "../data_structures/nodes.cr"
+require "../data_structures/undirectedgraph.cr"
 
 module Graphlb::Algorithms
   # Prim's algorithm is an algorithm for finding
@@ -46,7 +47,16 @@ module Graphlb::Algorithms
     end
 
     # constructs a path from source vertex to target vertex
-    # Returns the shortest path, if it exists, as an Array of vertices.
+    #
+    # @param : prev , prev hash contains the previous node of all the vertices
+    #
+    # @param : Source, the source vertex for the path
+    #
+    # @param : target, The vertex till which the path should be constructed
+    #
+    # @return : An array which contains all the vertices(path) to be travelled
+    # to reach from source to target vertex
+    #
     def path_constructor(prev, source, target)
       set = [] of String
       temp = target.name

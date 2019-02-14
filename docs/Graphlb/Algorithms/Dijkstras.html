@@ -91,6 +91,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/BinaryTreeNode" data-name="graphlb::datastructures::binarytreenode">
+      <a href="../../Graphlb/DataStructures/BinaryTreeNode.html">BinaryTreeNode</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/DirectedGraph" data-name="graphlb::datastructures::directedgraph">
       <a href="../../Graphlb/DataStructures/DirectedGraph.html">DirectedGraph</a>
       
@@ -175,7 +180,7 @@ vertices in the graph</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/algorithms/dijkstras.cr#L11" target="_blank">
+      <a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/dijkstras.cr#L12" target="_blank">
         graphlb/algorithms/dijkstras.cr
       </a>
     
@@ -196,14 +201,14 @@ vertices in the graph</p>
       <li class="entry-summary">
         <a href="#path_constructor%28prev%2Csource%2Ctarget%29-instance-method" class="signature"><strong>#path_constructor</strong>(prev, source, target)</a>
         
-          <div class="summary"><p>constructs a path from source vertex to target vertex Returns the shortest path, if it exists, as an Array of vertices.</p></div>
+          <div class="summary"><p>constructs a path from source vertex to target vertex</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#run%28graph%2Csource%29-instance-method" class="signature"><strong>#run</strong>(graph, source)</a>
         
-          <div class="summary"><p>returns two hashes, one contains the distance is vetex from the source node whereas, other hash conntains the information about the previous nodes for vertices in the graph </p></div>
+          <div class="summary"><p>Runs the Dijkstras Algorithm on the given graph and the source node</p></div>
         
       </li>
     
@@ -252,13 +257,21 @@ vertices in the graph</p>
         <a class="method-permalink" href="#path_constructor%28prev%2Csource%2Ctarget%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>constructs a path from source vertex to target vertex
-Returns the shortest path, if it exists, as an Array of vertices.</p></div>
+        <div class="doc"><p>constructs a path from source vertex to target vertex</p>
+
+<p>@param : prev , prev hash contains the previous node of all the vertices</p>
+
+<p>@param : Source, the source vertex for the path</p>
+
+<p>@param : target, The vertex till which the path should be constructed</p>
+
+<p>@return : An array which contains all the vertices(path) to be travelled
+to reach from source to target vertex</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/algorithms/dijkstras.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/dijkstras.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -271,14 +284,20 @@ Returns the shortest path, if it exists, as an Array of vertices.</p></div>
         <a class="method-permalink" href="#run%28graph%2Csource%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>returns two hashes, one contains the distance is vetex from the source
-node whereas, other hash conntains the information about the previous
-nodes for vertices in the graph</p></div>
+        <div class="doc"><p>Runs the Dijkstras Algorithm on the given graph and the source node</p>
+
+<p>@param : graph, A directed graph,</p>
+
+<p>@param : Source, Source vertex form which the algorithm starts running,</p>
+
+<p>@return : Two hashs(dist and prev), dist is the hash which contains the distance
+of a vertices from the source vertex, prev is the hash which contains the previous
+vertices of all the vertices that are reachable from source</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/algorithms/dijkstras.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/dijkstras.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>

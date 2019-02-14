@@ -91,6 +91,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/BinaryTreeNode" data-name="graphlb::datastructures::binarytreenode">
+      <a href="../../Graphlb/DataStructures/BinaryTreeNode.html">BinaryTreeNode</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/DirectedGraph" data-name="graphlb::datastructures::directedgraph">
       <a href="../../Graphlb/DataStructures/DirectedGraph.html">DirectedGraph</a>
       
@@ -176,7 +181,7 @@ in a graph</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/algorithms/depth_first_search.cr#L12" target="_blank">
+      <a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/depth_first_search.cr#L13" target="_blank">
         graphlb/algorithms/depth_first_search.cr
       </a>
     
@@ -197,12 +202,14 @@ in a graph</p>
       <li class="entry-summary">
         <a href="#reachable%28graph%2Csource%29-instance-method" class="signature"><strong>#reachable</strong>(graph, source)</a>
         
+          <div class="summary"><p>Given a graph and a Source vertex the DFS algorithm starts running from the sources vertex to find all the vertices that are reachable from the source vertex and the information about the previous node of all nodes</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#run%28graph%2Csource%29-instance-method" class="signature"><strong>#run</strong>(graph, source)</a>
         
-          <div class="summary"><p>returns a list of all vertices that are reachable from the source vertices.</p></div>
+          <div class="summary"><p>Given a graph and a Source vertex the DFS algorithm starts running from the sources vertex to find all the vertices that are visited from the source vertex.</p></div>
         
       </li>
     
@@ -251,10 +258,22 @@ in a graph</p>
         <a class="method-permalink" href="#reachable%28graph%2Csource%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Given a graph and a Source vertex the DFS algorithm starts running from the sources
+vertex to find all the vertices that are reachable from the source vertex and the
+information about the previous node of all nodes</p>
+
+<p>@param : graph, A graph on which the vertices are connected</p>
+
+<p>@param : Source, A source vertex where the algorithm starts</p>
+
+<p>@return : a tuple ([String]visited_nodes,[Hash]prev), visited nodes store the names
+of all the nodes that are reachable form the source vertex and prev stores the information
+about the previous nodes  </p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/algorithms/depth_first_search.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/depth_first_search.cr#L73" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -267,13 +286,21 @@ in a graph</p>
         <a class="method-permalink" href="#run%28graph%2Csource%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>returns a list of all vertices that are reachable from the
-source vertices.</p></div>
+        <div class="doc"><p>Given a graph and a Source vertex the DFS algorithm starts running from the sources
+vertex to find all the vertices that are visited from the source vertex.</p>
+
+<p>The DFS algorithm uses stack data-structure to find the next node to visit</p>
+
+<p>@param : graph, A graph on which the vertices are connected</p>
+
+<p>@param : Source, A source vertex where the algorithm starts</p>
+
+<p>@return : [string], An array of type string which contains all the node that are reachable form the source vertex</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/algorithms/depth_first_search.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/depth_first_search.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -1,10 +1,31 @@
-require "../data_structures/*"
+require "../data_structures/directedgraph.cr"
 require "../algorithms/depth_first_search.cr"
 
 module Graphlb::Algorithms
 
+  # The Edmonds-Karp Algorithm is a specific implementation of the Ford-Fulkerson
+  # algorithm. Like Ford-Fulkerson, Edmonds-Karp is also an algorithm that deals
+  # with the max-flow min-cut problem
+  #
+  # Edmonds-Karp differs from Ford-Fulkerson in that it chooses the next augmenting
+  # path using breadth-first search (bfs). So, if there are multiple augmenting
+  # paths to choose from, Edmonds-Karp will be sure to choose the shortest
+  # augmenting path from the source to the sink.
   class EdmondsKarp
 
+    # Finds the maximum flow in the flow network graph
+    #
+    # Given a source, sink and flow network the ford fulkerson algorithm runs on the graph.
+    # The algorithm starts form the source vetex and finds the maximum flow. This algorithm uses
+    # DFS to go to traverse the graph.
+    #
+    # @param : graph, a directed graph with edge capacities,
+    #
+    # @param : source, a source node where the algorithm starts,
+    #
+    # @param : sink, a sink where the flow ends
+    #
+    # @return : max_flow[Float64], the maximum flow in the flow network
     def run(graph,source,sink)
 
         puts ("fot")

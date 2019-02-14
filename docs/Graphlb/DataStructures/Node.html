@@ -91,6 +91,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/BinaryTreeNode" data-name="graphlb::datastructures::binarytreenode">
+      <a href="../../Graphlb/DataStructures/BinaryTreeNode.html">BinaryTreeNode</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/DirectedGraph" data-name="graphlb::datastructures::directedgraph">
       <a href="../../Graphlb/DataStructures/DirectedGraph.html">DirectedGraph</a>
       
@@ -177,7 +182,7 @@ and edge weight as its value</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/nodes.cr#L10" target="_blank">
+      <a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/nodes.cr#L10" target="_blank">
         graphlb/data_structures/nodes.cr
       </a>
     
@@ -194,7 +199,7 @@ and edge weight as its value</p>
       <li class="entry-summary">
         <a href="#new%28name%3AString%29-class-method" class="signature"><strong>.new</strong>(name : String)</a>
         
-          <div class="summary"><p>creates a new edge with a given name</p></div>
+          <div class="summary"><p>creats a graph whith no vertices and edges(empty-graph)</p></div>
         
       </li>
     
@@ -210,32 +215,40 @@ and edge weight as its value</p>
       <li class="entry-summary">
         <a href="#%21%3D%28other%3ANode%29-instance-method" class="signature"><strong>#!=</strong>(other : Node)</a>
         
+          <div class="summary"><p>Checks the wheather the two node are not equal</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#%3D%3D%28other%3ANode%29-instance-method" class="signature"><strong>#==</strong>(other : Node)</a>
         
+          <div class="summary"><p>Checks the wheather the two node are equal</p></div>
+        
       </li>
     
       <li class="entry-summary">
-        <a href="#add_edge%28node%2Cweight%29-instance-method" class="signature"><strong>#add_edge</strong>(node, weight)</a>
+        <a href="#add_edge%28to_node%2Cweight%29-instance-method" class="signature"><strong>#add_edge</strong>(to_node, weight)</a>
         
-          <div class="summary"><p>Adds a new edge to the vertex node with information about edge weight and adjacent vertex</p></div>
+          <div class="summary"><p>Adds a new edge from the self to the to_node</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#edges%3AHash%28Graphlb%3A%3ADataStructures%3A%3ANode%2CFloat64%29-instance-method" class="signature"><strong>#edges</strong> : Hash(Graphlb::DataStructures::Node, Float64)</a>
         
+          <div class="summary"><p>A Hash to store the adjacency list of the vertex</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
         
+          <div class="summary"><p>Name of the node, which is expexted to be unique for each vertex.</p></div>
+        
       </li>
     
       <li class="entry-summary">
-        <a href="#remove_edge%28node%29-instance-method" class="signature"><strong>#remove_edge</strong>(node)</a>
+        <a href="#remove_edge%28to_node%29-instance-method" class="signature"><strong>#remove_edge</strong>(to_node)</a>
         
           <div class="summary"><p>Removes an already existing edge from the graph</p></div>
         
@@ -282,12 +295,12 @@ and edge weight as its value</p>
         <a class="method-permalink" href="#new%28name%3AString%29-class-method">#</a>
       </div>
       
-        <div class="doc"><p>creates a new edge with a given name</p></div>
+        <div class="doc"><p>creats a graph whith no vertices and edges(empty-graph)</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/nodes.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/nodes.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -307,10 +320,14 @@ and edge weight as its value</p>
         <a class="method-permalink" href="#%21%3D%28other%3ANode%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Checks the wheather the two node are not equal</p>
+
+<p>@return : <em>true</em> if the two nodes are not equal, else false.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/nodes.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/nodes.cr#L57" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -323,29 +340,40 @@ and edge weight as its value</p>
         <a class="method-permalink" href="#%3D%3D%28other%3ANode%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Checks the wheather the two node are equal</p>
+
+<p>@return : <em>true</em> if the two nodes are equal, else false.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/nodes.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/nodes.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="add_edge(node,weight)-instance-method">
+    <div class="entry-detail" id="add_edge(to_node,weight)-instance-method">
       <div class="signature">
         
-        def <strong>add_edge</strong>(node, weight)
+        def <strong>add_edge</strong>(to_node, weight)
 
-        <a class="method-permalink" href="#add_edge%28node%2Cweight%29-instance-method">#</a>
+        <a class="method-permalink" href="#add_edge%28to_node%2Cweight%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Adds a new edge to the vertex node with information about
-edge weight and adjacent vertex</p></div>
+        <div class="doc"><p>Adds a new edge from the self to the to_node</p>
+
+<p>if to_node is not present in the greaph an exception is raised else an edge is created.</p>
+
+<p>@param : to_node, the node where the edge ends,</p>
+
+<p>@param : weight, the edge-weight,</p>
+
+<p>@return : list of edges of the self node</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/nodes.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/nodes.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -358,10 +386,12 @@ edge weight and adjacent vertex</p></div>
         <a class="method-permalink" href="#edges%3AHash%28Graphlb%3A%3ADataStructures%3A%3ANode%2CFloat64%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>A Hash to store the adjacency list of the vertex</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/nodes.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/nodes.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -374,28 +404,36 @@ edge weight and adjacent vertex</p></div>
         <a class="method-permalink" href="#name%3AString-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Name of the node, which is expexted to be unique for each vertex.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/nodes.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/nodes.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="remove_edge(node)-instance-method">
+    <div class="entry-detail" id="remove_edge(to_node)-instance-method">
       <div class="signature">
         
-        def <strong>remove_edge</strong>(node)
+        def <strong>remove_edge</strong>(to_node)
 
-        <a class="method-permalink" href="#remove_edge%28node%29-instance-method">#</a>
+        <a class="method-permalink" href="#remove_edge%28to_node%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Removes an already existing edge from the graph</p></div>
+        <div class="doc"><p>Removes an already existing edge from the graph</p>
+
+<p>if to_node is not present in the greaph an exception is raised else an edge is created.</p>
+
+<p>@param : to_node, the node where the edge ends,</p>
+
+<p>@return : list of edges of the self node</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/data_structures/nodes.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/data_structures/nodes.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>

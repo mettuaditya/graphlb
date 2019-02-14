@@ -91,6 +91,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/BinaryTreeNode" data-name="graphlb::datastructures::binarytreenode">
+      <a href="../../Graphlb/DataStructures/BinaryTreeNode.html">BinaryTreeNode</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/DirectedGraph" data-name="graphlb::datastructures::directedgraph">
       <a href="../../Graphlb/DataStructures/DirectedGraph.html">DirectedGraph</a>
       
@@ -150,6 +155,21 @@
 
 
 
+  <h2>Overview</h2>
+
+  <p>in the graph, to find the maximum possible flow from s to t with following constraints needs to be true:</p>
+
+<p>a) Flow on an edge doesn’t exceed the given capacity of the edge.</p>
+
+<p>b) Incoming flow is equal to outgoing flow for every vertex except s and t.</p>
+
+<p>In ford Fulkerson algorithm An augmenting path is a simple path from source to sink which do not include any
+cycles and that pass only through positive weighted edges. A residual network graph
+indicates how much more flow is allowed in each edge in the network graph. If there
+are no augmenting paths possible from source to sink, then the flow is maximum. The result i.e.
+the maximum flow will be the total flow out of source node which is also equal to
+total flow in to the sink node.</p>
+
 
 
 
@@ -166,7 +186,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/algorithms/ford_fulkerson.cr#L6" target="_blank">
+      <a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/ford_fulkerson.cr#L18" target="_blank">
         graphlb/algorithms/ford_fulkerson.cr
       </a>
     
@@ -186,6 +206,8 @@
     
       <li class="entry-summary">
         <a href="#run%28graph%2Csource%2Csink%29-instance-method" class="signature"><strong>#run</strong>(graph, source, sink)</a>
+        
+          <div class="summary"><p>Finds the maximum flow in the flow network graph</p></div>
         
       </li>
     
@@ -234,10 +256,24 @@
         <a class="method-permalink" href="#run%28graph%2Csource%2Csink%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Finds the maximum flow in the flow network graph</p>
+
+<p>Given a source, sink and flow network the ford fulkerson algorithm runs on the graph.
+The algorithm starts form the source vetex and finds the maximum flow. This algorithm uses
+BFS to go to traverse the graph.</p>
+
+<p>@param : graph, a directed graph with edge capacities,</p>
+
+<p>@param : source, a source node where the algorithm starts,</p>
+
+<p>@param : sink, a sink where the flow ends</p>
+
+<p>@return : max_flow[Float64], the maximum flow in the flow network</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/12cac1862ffae30d2f707608c5bed4014871a7dd/src/graphlb/algorithms/ford_fulkerson.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/ford_fulkerson.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -1,4 +1,5 @@
-require "../data_structures/*"
+require "../data_structures/nodes.cr"
+require "../data_structures/stack.cr"
 
 module Graphlb::Algorithms
   # Depth first Search is an algorithm for finding
@@ -10,10 +11,16 @@ module Graphlb::Algorithms
   # in a graph
   #
   class DFS
+    # Given a graph and a Source vertex the DFS algorithm starts running from the sources
+    # vertex to find all the vertices that are visited from the source vertex.
     #
-    # returns a list of all vertices that are reachable from the
-    # source vertices.
+    # The DFS algorithm uses stack data-structure to find the next node to visit
     #
+    # @param : graph, A graph on which the vertices are connected
+    #
+    # @param : Source, A source vertex where the algorithm starts
+    #
+    # @return : [string], An array of type string which contains all the node that are reachable form the source vertex
     def run(graph, source)
       vertex_set = [] of Node
       vertices = graph.get_vertices
@@ -51,6 +58,18 @@ module Graphlb::Algorithms
       return visitedQueue.values
     end
 
+    # Given a graph and a Source vertex the DFS algorithm starts running from the sources
+    # vertex to find all the vertices that are reachable from the source vertex and the
+    #information about the previous node of all nodes
+    #
+    #
+    # @param : graph, A graph on which the vertices are connected
+    #
+    # @param : Source, A source vertex where the algorithm starts
+    #
+    # @return : a tuple ([String]visited_nodes,[Hash]prev), visited nodes store the names
+    # of all the nodes that are reachable form the source vertex and prev stores the information
+    # about the previous nodes  
     def reachable(graph, source)
       vertex_set = [] of Node
       vertices = graph.get_vertices
