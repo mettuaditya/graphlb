@@ -15,8 +15,9 @@ or  add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  crystalg:
+  graphlb:
     github: mettuaditya/graphlb
+    version: ~> 0.1.0
 ```
 
 Then run `shards install`
@@ -42,7 +43,7 @@ Then run `shards install`
   - [x] Queue
   - [x] Stack
   - [x] General-Tree
-  - [ ] Binary-search-tree
+  - [x] Binary-search-tree
   - [ ] Radix-tree
   - [ ] RB-tree
 
