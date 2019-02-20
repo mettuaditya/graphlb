@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.0">
+<meta name="generator" content="Crystal Docs 0.27.2">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -180,7 +180,7 @@ vertices in the graph</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/dijkstras.cr#L12" target="_blank">
+      <a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/algorithms/dijkstras.cr#L12" target="_blank">
         graphlb/algorithms/dijkstras.cr
       </a>
     
@@ -191,6 +191,18 @@ vertices in the graph</p>
 
 
 
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28graph%2Csource%29-class-method" class="signature"><strong>.new</strong>(graph, source)</a>
+        
+          <div class="summary"><p>Runs the Dijkstras Algorithm on the given graph and the source node</p></div>
+        
+      </li>
+    
+  </ul>
+
 
 
 
@@ -199,16 +211,16 @@ vertices in the graph</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#path_constructor%28prev%2Csource%2Ctarget%29-instance-method" class="signature"><strong>#path_constructor</strong>(prev, source, target)</a>
+        <a href="#shortest_path%28source%2Ctarget%29-instance-method" class="signature"><strong>#shortest_path</strong>(source, target)</a>
         
           <div class="summary"><p>constructs a path from source vertex to target vertex</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#run%28graph%2Csource%29-instance-method" class="signature"><strong>#run</strong>(graph, source)</a>
+        <a href="#shortest_paths%28source%29-instance-method" class="signature"><strong>#shortest_paths</strong>(source)</a>
         
-          <div class="summary"><p>Runs the Dijkstras Algorithm on the given graph and the source node</p></div>
+          <div class="summary"><p>constructs a path from source vertex to all other vertices in the graph</p></div>
         
       </li>
     
@@ -243,18 +255,45 @@ vertices in the graph</p>
 </div>
 
 
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(graph,source)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(graph, source)
+
+        <a class="method-permalink" href="#new%28graph%2Csource%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Runs the Dijkstras Algorithm on the given graph and the source node</p>
+
+<p>@param : graph, A directed graph,</p>
+
+<p>@param : Source, Source vertex form which the algorithm starts running,</p>
+
+<p>@raise : it raises an exception when there is a negative edge in the graph</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/algorithms/dijkstras.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
 
 
 
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="path_constructor(prev,source,target)-instance-method">
+    <div class="entry-detail" id="shortest_path(source,target)-instance-method">
       <div class="signature">
         
-        def <strong>path_constructor</strong>(prev, source, target)
+        def <strong>shortest_path</strong>(source, target)
 
-        <a class="method-permalink" href="#path_constructor%28prev%2Csource%2Ctarget%29-instance-method">#</a>
+        <a class="method-permalink" href="#shortest_path%28source%2Ctarget%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>constructs a path from source vertex to target vertex</p>
@@ -271,33 +310,30 @@ to reach from source to target vertex</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/dijkstras.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/algorithms/dijkstras.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="run(graph,source)-instance-method">
+    <div class="entry-detail" id="shortest_paths(source)-instance-method">
       <div class="signature">
         
-        def <strong>run</strong>(graph, source)
+        def <strong>shortest_paths</strong>(source)
 
-        <a class="method-permalink" href="#run%28graph%2Csource%29-instance-method">#</a>
+        <a class="method-permalink" href="#shortest_paths%28source%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Runs the Dijkstras Algorithm on the given graph and the source node</p>
+        <div class="doc"><p>constructs a path from source vertex to all other vertices in the graph</p>
 
-<p>@param : graph, A directed graph,</p>
+<p>@param : Source, the source vertex for the path</p>
 
-<p>@param : Source, Source vertex form which the algorithm starts running,</p>
-
-<p>@return : Two hashs(dist and prev), dist is the hash which contains the distance
-of a vertices from the source vertex, prev is the hash which contains the previous
-vertices of all the vertices that are reachable from source</p></div>
+<p>@return : An array which contains all the vertices(path) to be travelled
+to reach from source vertex to all other vertices in the graph</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/40ca728dbaf0a061368465d09755089337856ce2/src/graphlb/algorithms/dijkstras.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/algorithms/dijkstras.cr#L87" target="_blank">View source</a>]
         
       </div>
     </div>

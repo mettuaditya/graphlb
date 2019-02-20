@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.27.2">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
+  <meta id="repository-name" content="github.com/mettuaditya/graphlb">
+  <title>Graphlb::DataStructures::BinaryTreeNode - github.com/mettuaditya/graphlb</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb" data-name="graphlb">
+      <a href="../../Graphlb.html">Graphlb</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms" data-name="graphlb::algorithms">
+      <a href="../../Graphlb/Algorithms.html">Algorithms</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BellmanFord" data-name="graphlb::algorithms::bellmanford">
+      <a href="../../Graphlb/Algorithms/BellmanFord.html">BellmanFord</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BFS" data-name="graphlb::algorithms::bfs">
+      <a href="../../Graphlb/Algorithms/BFS.html">BFS</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/DFS" data-name="graphlb::algorithms::dfs">
+      <a href="../../Graphlb/Algorithms/DFS.html">DFS</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/Dijkstras" data-name="graphlb::algorithms::dijkstras">
+      <a href="../../Graphlb/Algorithms/Dijkstras.html">Dijkstras</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/EdmondsKarp" data-name="graphlb::algorithms::edmondskarp">
+      <a href="../../Graphlb/Algorithms/EdmondsKarp.html">EdmondsKarp</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/FordFulkerson" data-name="graphlb::algorithms::fordfulkerson">
+      <a href="../../Graphlb/Algorithms/FordFulkerson.html">FordFulkerson</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/Prims" data-name="graphlb::algorithms::prims">
+      <a href="../../Graphlb/Algorithms/Prims.html">Prims</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures" data-name="graphlb::datastructures">
+      <a href="../../Graphlb/DataStructures.html">DataStructures</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/BinaryTreeNode" data-name="graphlb::datastructures::binarytreenode">
+      <a href="../../Graphlb/DataStructures/BinaryTreeNode.html">BinaryTreeNode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/DirectedGraph" data-name="graphlb::datastructures::directedgraph">
+      <a href="../../Graphlb/DataStructures/DirectedGraph.html">DirectedGraph</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/Node" data-name="graphlb::datastructures::node">
+      <a href="../../Graphlb/DataStructures/Node.html">Node</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/Queue" data-name="graphlb::datastructures::queue(a)">
+      <a href="../../Graphlb/DataStructures/Queue.html">Queue</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/Stack" data-name="graphlb::datastructures::stack(a)">
+      <a href="../../Graphlb/DataStructures/Stack.html">Stack</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/TreeNode" data-name="graphlb::datastructures::treenode">
+      <a href="../../Graphlb/DataStructures/TreeNode.html">TreeNode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures/UnDirectedGraph" data-name="graphlb::datastructures::undirectedgraph">
+      <a href="../../Graphlb/DataStructures/UnDirectedGraph.html">UnDirectedGraph</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Graphlb::DataStructures::BinaryTreeNode
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Graphlb/DataStructures/BinaryTreeNode.html">Graphlb::DataStructures::BinaryTreeNode</a></li><li class="superclass"><a href="../../Graphlb/DataStructures/TreeNode.html">Graphlb::DataStructures::TreeNode</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Provides a Binary tree implementation. This node allows only two child nodes
+(left and right child). It also provides direct access to the left or right
+child, including assignment to the same.</p>
+
+<p>This inherits from the {TreeNode} class.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/data_structures/binary_tree.cr#L14" target="_blank">
+        graphlb/data_structures/binary_tree.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#is_left_child%3F-instance-method" class="signature"><strong>#is_left_child?</strong></a>
+        
+          <div class="summary"><p><em>true</em> if the receiver node is the left child of its parent.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_right_child%3F-instance-method" class="signature"><strong>#is_right_child?</strong></a>
+        
+          <div class="summary"><p><em>true</em> if the receiver node is the right child of its parent.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_child-instance-method" class="signature"><strong>#left_child</strong></a>
+        
+          <div class="summary"><p>Left child of the receiver node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_child%3D%28child%29-instance-method" class="signature"><strong>#left_child=</strong>(child)</a>
+        
+          <div class="summary"><p>Sets the left child of the receiver node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_child-instance-method" class="signature"><strong>#right_child</strong></a>
+        
+          <div class="summary"><p>Right child of the receiver node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_child%3D%28child%29-instance-method" class="signature"><strong>#right_child=</strong>(child)</a>
+        
+          <div class="summary"><p>Sets the right child of the receiver node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#swap_children-instance-method" class="signature"><strong>#swap_children</strong></a>
+        
+          <div class="summary"><p>Swaps the left and right child nodes of the receiver node with each other.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="../../Graphlb/DataStructures/TreeNode.html">Graphlb::DataStructures::TreeNode</a></code></h3>
+  
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#%3C%3C%28child%29-instance-method" class="tooltip">
+      <span><<(child)</span>
+    <<</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#%5B%5D%28name_or_index%2Cnum_as_name%3Dfalse%29-instance-method" class="tooltip">
+      <span>[](name_or_index, num_as_name = <span class="n">false</span>)</span>
+    []</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#add%28child%2Cat_index%3D-1%29-instance-method" class="tooltip">
+      <span>add(child, at_index = <span class="n">-1</span>)</span>
+    add</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#children%3AArray%28Graphlb%3A%3ADataStructures%3A%3ATreeNode%29-instance-method" class="tooltip">
+      <span>children : Array(Graphlb::DataStructures::TreeNode)<br/>children(&block)</span>
+    children</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#content%3AInt32%3F-instance-method" class="tooltip">
+      <span>content : Int32?</span>
+    content</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#content%3D%28content%3AInt32%3F%29-instance-method" class="tooltip">
+      <span>content=(content : Int32?)</span>
+    content=</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#each%28%26block%29-instance-method" class="tooltip">
+      <span>each(&block)<br/>each</span>
+    each</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#each_leaf-instance-method" class="tooltip">
+      <span>each_leaf<br/>each_leaf(&block)</span>
+    each_leaf</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#first_sibling-instance-method" class="tooltip">
+      <span>first_sibling</span>
+    first_sibling</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#has_children%3F-instance-method" class="tooltip">
+      <span>has_children?</span>
+    has_children?</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#has_content%3F-instance-method" class="tooltip">
+      <span>has_content?</span>
+    has_content?</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#in_degree-instance-method" class="tooltip">
+      <span>in_degree</span>
+    in_degree</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#insertion_range-instance-method" class="tooltip">
+      <span>insertion_range</span>
+    insertion_range</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#is_first_sibling%3F-instance-method" class="tooltip">
+      <span>is_first_sibling?</span>
+    is_first_sibling?</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#is_last_sibling%3F-instance-method" class="tooltip">
+      <span>is_last_sibling?</span>
+    is_last_sibling?</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#is_leaf%3F-instance-method" class="tooltip">
+      <span>is_leaf?</span>
+    is_leaf?</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#is_only_child%3F-instance-method" class="tooltip">
+      <span>is_only_child?</span>
+    is_only_child?</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#is_root%3F-instance-method" class="tooltip">
+      <span>is_root?</span>
+    is_root?</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#lam%28node%2Cprefix%29-instance-method" class="tooltip">
+      <span>lam(node, prefix)</span>
+    lam</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#last_sibling-instance-method" class="tooltip">
+      <span>last_sibling</span>
+    last_sibling</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#name%3AString-instance-method" class="tooltip">
+      <span>name : String</span>
+    name</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#next_sibling-instance-method" class="tooltip">
+      <span>next_sibling</span>
+    next_sibling</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#node_depth-instance-method" class="tooltip">
+      <span>node_depth</span>
+    node_depth</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#node_height-instance-method" class="tooltip">
+      <span>node_height</span>
+    node_height</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#out_degree-instance-method" class="tooltip">
+      <span>out_degree</span>
+    out_degree</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#parent%3ATreeNode%3F-instance-method" class="tooltip">
+      <span>parent : TreeNode?</span>
+    parent</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#parent%3D%28parent%29-instance-method" class="tooltip">
+      <span>parent=(parent)</span>
+    parent=</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#parentage-instance-method" class="tooltip">
+      <span>parentage</span>
+    parentage</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#previous_sibling-instance-method" class="tooltip">
+      <span>previous_sibling</span>
+    previous_sibling</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#print_tree%28level%3Dself.node_depth%2Cmax_depth%3Dnil%29-instance-method" class="tooltip">
+      <span>print_tree(level = <span class="k">self</span>.node_depth, max_depth = <span class="n">nil</span>)</span>
+    print_tree</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#remove%21%28child%29-instance-method" class="tooltip">
+      <span>remove!(child)</span>
+    remove!</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#remove_from_parent%21-instance-method" class="tooltip">
+      <span>remove_from_parent!</span>
+    remove_from_parent!</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#rename%28new_name%29-instance-method" class="tooltip">
+      <span>rename(new_name)</span>
+    rename</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#replace%21%28old_child%2Cnew_child%29-instance-method" class="tooltip">
+      <span>replace!(old_child, new_child)</span>
+    replace!</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#replace_with%28node%29-instance-method" class="tooltip">
+      <span>replace_with(node)</span>
+    replace_with</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#root-instance-method" class="tooltip">
+      <span>root</span>
+    root</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#set_as_root%21-instance-method" class="tooltip">
+      <span>set_as_root!</span>
+    set_as_root!</a>, 
+    
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#siblings-instance-method" class="tooltip">
+      <span>siblings</span>
+    siblings</a>
+    
+  
+
+
+    
+
+  <h3>Constructor methods inherited from class <code><a href="../../Graphlb/DataStructures/TreeNode.html">Graphlb::DataStructures::TreeNode</a></code></h3>
+  
+  
+    <a href="../../Graphlb/DataStructures/TreeNode.html#new%28name%2Ccontent%3Dnil%29-class-method" class="tooltip">
+      <span>new(name, content = <span class="n">nil</span>)</span>
+    new</a>
+    
+  
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="is_left_child?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_left_child?</strong>
+
+        <a class="method-permalink" href="#is_left_child%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><em>true</em> if the receiver node is the left child of its parent.
+Always returns <em>false</em> if it is a root node.</p>
+
+<p>@return [Boolean] <em>true</em> if this is the left child of its parent.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/data_structures/binary_tree.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_right_child?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_right_child?</strong>
+
+        <a class="method-permalink" href="#is_right_child%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><em>true</em> if the receiver node is the right child of its parent.
+Always returns <em>false</em> if it is a root node.</p>
+
+<p>@return [Boolean] <em>true</em> if this is the right child of its parent.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/data_structures/binary_tree.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_child-instance-method">
+      <div class="signature">
+        
+        def <strong>left_child</strong>
+
+        <a class="method-permalink" href="#left_child-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Left child of the receiver node. Note that left Child == first Child.</p>
+
+<p>@return [BinaryTreeNode] The left most (or first) child.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/data_structures/binary_tree.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_child=(child)-instance-method">
+      <div class="signature">
+        
+        def <strong>left_child=</strong>(child)
+
+        <a class="method-permalink" href="#left_child%3D%28child%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets the left child of the receiver node. If a previous child existed, it
+is replaced.</p>
+
+<p>@param [BinaryTreeNode] child The child to add as the left-side
+node.</p>
+
+<p>@return [BinaryTreeNode] The assigned child node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/data_structures/binary_tree.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_child-instance-method">
+      <div class="signature">
+        
+        def <strong>right_child</strong>
+
+        <a class="method-permalink" href="#right_child-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Right child of the receiver node. Note that right child == last child
+unless there is only one child.</p>
+
+<p>Returns <em>nil</em> if the right child does not exist.</p>
+
+<p>@return [BinaryTreeNode] The right child, or <em>nil</em> if the right side
+child does not exist.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/data_structures/binary_tree.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_child=(child)-instance-method">
+      <div class="signature">
+        
+        def <strong>right_child=</strong>(child)
+
+        <a class="method-permalink" href="#right_child%3D%28child%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets the right child of the receiver node. If a previous child existed, it
+is replaced.</p>
+
+<p>@param [BinaryTreeNode] child The child to add as the right-side
+node.</p>
+
+<p>@return [BinaryTreeNode] The assigned child node.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/data_structures/binary_tree.cr#L96" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="swap_children-instance-method">
+      <div class="signature">
+        
+        def <strong>swap_children</strong>
+
+        <a class="method-permalink" href="#swap_children-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Swaps the left and right child nodes of the receiver node with each other.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/43f8316019a7ecbe31bcc96a286b72a848f362b7/src/graphlb/data_structures/binary_tree.cr#L101" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

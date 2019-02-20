@@ -15,7 +15,6 @@ module Graphlb::Algorithms
   # It also finds wheather a negative cycle is present in a graph or not
   class BellmanFord
     #
-
     # Runs the Bellman_Ford Algorithm on the given graph and the source node
     #
     # If the graph contains a negative cycle it returns an exception
@@ -23,30 +22,26 @@ module Graphlb::Algorithms
     # @param : graph, A directed graph
     #
     # @param : Source, Source vertex form which the algorithm starts running
-    #
-    # @return : Two hashs(dist and prev), dist is the hash which contains the distance
-    # of a vertices from the source vertex, prev is the hash which contains the previous
-    # vertices of all the vertices that are reachable from source
-    def run(graph, source)
+    def initialize(graph, source)
       vertex_set = graph.get_vertices
-      dist = {} of Node => Float64
-      prev = {} of String => String | Nil
+      @dist = {} of Node => Float64
+      @prev = {} of String => String | Nil
       i = 0
       size = vertex_set.size
       while i < size
-        dist[vertex_set[i]] = Float64::INFINITY
-        prev[vertex_set[i].name] = nil
+        @dist[vertex_set[i]] = Float64::INFINITY
+        @prev[vertex_set[i].name] = nil
         i = i + 1
       end
-      dist[source] = 0.0
+      @dist[source] = 0.0
       i = 1
       while i < size - 1
         vertex_set.each do |j|
           j.edges.keys.each do |neighbour|
-            temp = dist[j] + j.edges[neighbour]
-            if temp < dist[neighbour]
-              dist[neighbour] = temp
-              prev[neighbour.name] = j.name
+            temp = @dist[j] + j.edges[neighbour]
+            if temp < @dist[neighbour]
+              @dist[neighbour] = temp
+              @prev[neighbour.name] = j.name
             end
           end
         end
@@ -54,19 +49,15 @@ module Graphlb::Algorithms
       end
       vertex_set.each do |j|
         j.edges.keys.each do |neighbour|
-          temp = dist[j] + j.edges[neighbour]
-          if temp < dist[neighbour]
+          temp = @dist[j] + j.edges[neighbour]
+          if temp < @dist[neighbour]
             raise "graph contains negative cycle"
           end
         end
       end
-
-      return dist, prev
     end
 
     # constructs a path from source vertex to target vertex
-    #
-    # @param : prev , prev hash contains the previous node of all the vertices
     #
     # @param : Source, the source vertex for the path
     #
@@ -75,15 +66,37 @@ module Graphlb::Algorithms
     # @return : An array which contains all the vertices(path) to be travelled
     # to reach from source to target vertex
     #
-    def path_constructor(prev, source, target)
+    def shortest_path (source, target)
       set = [] of String
-      temp = target.name
-      while (!temp.nil? && temp != source.name)
+      temp = @prev[target.name]
+      while (!temp.nil?)
         set.insert(0, temp)
-        temp = prev[temp]
+        temp = @prev[temp]
       end
-      set.insert(0, source.name)
-      return set
+      if (set.empty? ||set[0] != source.name)
+        if (target == source)
+          return set << source.name
+        end
+        return set << "nil"
+      else
+        set << target.name
+        return set
+      end
+    end
+
+    # constructs a path from source vertex to all other vertices in the graph
+    #
+    # @param : Source, the source vertex for the path
+    #
+    # @return : An array which contains all the vertices(path) to be travelled
+    # to reach from source vertex to all other vertices in the graph
+    def shortest_paths (source)
+      vertex_path = Array(Array(String)).new()
+      @dist.keys.each do |vertex|
+        path = shortest_path(source,vertex)
+        vertex_path << path
+      end
+      return vertex_path
     end
   end
 end
