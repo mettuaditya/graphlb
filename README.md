@@ -2,6 +2,7 @@
 # graphlb
 graphlb is a crystal library which contains all the graph datastructures and algorithms in crystal-lang.
 
+# Documentation
 Please find the Documentation [here](https://mettuaditya.github.io/graphlb/)
 
 # Installation
