@@ -52,7 +52,6 @@ module Graphlb::Algorithms
             end
           end
         end
-        puts (vertex.name)
         visitedQueue.push(vertex.name)
       end
       return visitedQueue.values
@@ -69,7 +68,7 @@ module Graphlb::Algorithms
     #
     # @return : a tuple ([String]visited_nodes,[Hash]prev), visited nodes store the names
     # of all the nodes that are reachable form the source vertex and prev stores the information
-    # about the previous nodes  
+    # about the previous nodes
     def reachable(graph, source)
       vertex_set = [] of Node
       vertices = graph.get_vertices

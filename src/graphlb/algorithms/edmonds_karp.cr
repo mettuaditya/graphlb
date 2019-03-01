@@ -28,26 +28,33 @@ module Graphlb::Algorithms
     # @return : max_flow[Float64], the maximum flow in the flow network
     def run(graph,source,sink)
 
-        puts ("fot")
         max_flow = 0
         rgraph = graph
         r_vertices = rgraph.get_vertices
         r_vertices.each do |vertex|
           vertex.edges.keys.each do |neighbour|
+            if (vertex.edges[neighbour] < 0.0)
+              raise "graph contains negative capacities"
+            end
             if (neighbour.edges.keys.find { |i| i == vertex}).nil?
               neighbour.add_edge(vertex,0.0)
             end
           end
         end
 
+        if (source == sink)
+          raise "same source and sink"
+        end
+
+        dfs = BFS.new()
+        visit_set,prev = dfs.reachable(rgraph,source)
+        temp = visit_set.find{ |i| i == sink.name}
+        if temp.nil?
+          raise "source and sink are not reachable"
+        end
         while(true)
-          # rgraph.get_vertices.each do |vertex|
-          #   vertex.edges.keys.each do |i|
-          #     puts ("#{vertex.name}-#{i.name}-->#{vertex.edges[i]}")
-          #   end
-          # end
-          dfs = DFS.new()
           visit_set,prev = dfs.reachable(rgraph,source)
+
           temp = visit_set.find{ |i| i == sink.name}
           if temp.nil?
             break
@@ -75,7 +82,7 @@ module Graphlb::Algorithms
           end
           max_flow = max_flow + path_len
         end
-        return max_flow
-    end
+          return max_flow
+      end
   end
 end

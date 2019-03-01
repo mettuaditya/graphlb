@@ -36,8 +36,8 @@ module Graphlb::Algorithms
         u = vertex_set.min_by { |n| @dist.fetch(n, Float64::INFINITY) }
         vertex_set.delete(u)
         u.edges.keys.each do |neighbour|
-          if (u.edges[neighbour] < 0)
-            raise "graph contains negative edge"
+          if u.edges[neighbour] < 0
+            raise Exception.new("graph contains negative edge")
           else
             temp = @dist[u] + u.edges[neighbour]
             if temp < @dist[neighbour]

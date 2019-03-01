@@ -37,14 +37,26 @@ module Graphlb::Algorithms
         r_vertices = rgraph.get_vertices
         r_vertices.each do |vertex|
           vertex.edges.keys.each do |neighbour|
+            if (vertex.edges[neighbour] < 0.0)
+              raise "graph contains negative capacities"
+            end
             if (neighbour.edges.keys.find { |i| i == vertex}).nil?
               neighbour.add_edge(vertex,0.0)
             end
           end
         end
 
+        if (source == sink)
+          raise "same source and sink"
+        end
+
+        dfs = DFS.new()
+        visit_set,prev = dfs.reachable(rgraph,source)
+        temp = visit_set.find{ |i| i == sink.name}
+        if temp.nil?
+          raise "source and sink are not reachable"
+        end
         while(true)
-          bfs = BFS.new()
           visit_set,prev = bfs.reachable(rgraph,source)
           temp = visit_set.find{ |i| i == sink.name}
           if temp.nil?
