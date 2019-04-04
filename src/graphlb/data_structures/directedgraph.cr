@@ -21,6 +21,9 @@ module Graphlb::DataStructures
     # creats a graph whith no vertices and edges(empty-graph)
     def initialize
       @vertices = [] of Node
+      @index = Float64::INFINITY
+      @lowlink = Float64::INFINITY
+      @onStack = false
     end
 
     # Creates a new vertex with in the graph.

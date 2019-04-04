@@ -8,7 +8,7 @@ module Graphlb::Algorithms
     @colour_map = {} of Node => Bool
     def initialize(graph)
 
-      if graph.is_a?(DirectedGraph) then
+      if graph.is_a?(DirectedGraph)
         raise "Bipartite matching is done only for Undirected gaphs"
       else
         bfs = BFS.new()
@@ -44,7 +44,7 @@ module Graphlb::Algorithms
     end
 
     def assign_colour(key)
-      if @previous[key].nil? then
+      if @previous[key].nil?
         @colour_map[key] = true
       else
         @colour_map[key] = !@colour_map[value]
@@ -54,12 +54,12 @@ module Graphlb::Algorithms
     def check_set(set)
       set.each do |v|
         v.edges.keys do |u|
-          if set.include?(u) then
+          if set.include?(u) 
             return "no bipartite possible"
           end
         end
       end
     end
-    
+
   end
 end
