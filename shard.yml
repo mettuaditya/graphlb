@@ -1,8 +1,12 @@
 name: graphlb
 version: 0.1.0
 
+dependencies:
+    pegmatite:
+      github: jemc/crystal-pegmatite
+
 authors:
-  - mettuaditya <adithya.may6@gmail.com>
+    - mettuaditya <adithya.may6@gmail.com>
 
 crystal: 0.27.0
 
