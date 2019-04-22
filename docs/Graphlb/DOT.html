@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/mettuaditya/graphlb">
-  <title>Graphlb::DataStructures - github.com/mettuaditya/graphlb</title>
+  <title>Graphlb::DOT - github.com/mettuaditya/graphlb</title>
 </head>
 <body>
 
@@ -226,7 +226,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures" data-name="graphlb::datastructures">
+  <li class="parent " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures" data-name="graphlb::datastructures">
       <a href="../Graphlb/DataStructures.html">DataStructures</a>
       
         <ul>
@@ -271,7 +271,7 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/mettuaditya/graphlb/Graphlb/DOT" data-name="graphlb::dot">
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb/DOT" data-name="graphlb::dot">
       <a href="../Graphlb/DOT.html">DOT</a>
       
         <ul>
@@ -335,20 +335,13 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">module</span> Graphlb::DataStructures
+  <span class="kind">module</span> Graphlb::DOT
 
 </h1>
 
 
 
 
-
-  <h2>Overview</h2>
-
-  <p>In the module the we have defined the data-structures starting from the simple Node data-structure to a complex tree data-structure
-which will be used in many general graph algorithms to obtain efficient solutions.</p>
-
-<p>These are Just some of the basic data-structures and more data-structures will be added as we move between different algorithms.</p>
 
 
 
@@ -366,56 +359,36 @@ which will be used in many general graph algorithms to obtain efficient solution
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/tree.cr#L1" target="_blank">
-        graphlb/data_structures/tree.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/binary_tree.cr#L7" target="_blank">
-        graphlb/data_structures/binary_tree.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/nodes.cr#L1" target="_blank">
-        graphlb/data_structures/nodes.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/queue.cr#L1" target="_blank">
-        graphlb/data_structures/queue.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/stack.cr#L1" target="_blank">
-        graphlb/data_structures/stack.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/undirectedgraph.cr#L3" target="_blank">
-        graphlb/data_structures/undirectedgraph.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/directedgraph.cr#L7" target="_blank">
-        graphlb/data_structures/directedgraph.cr
+      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/algorithms/dot.cr#L3" target="_blank">
+        graphlb/algorithms/dot.cr
       </a>
     
     <br/>
   
 
 
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="EDGE_OPTS">
+        <strong>EDGE_OPTS</strong> = <code>[<span class="s">&quot;arrowhead&quot;</span>, <span class="s">&quot;arrowsize&quot;</span>, <span class="s">&quot;arrowtail&quot;</span>, <span class="s">&quot;color&quot;</span>, <span class="s">&quot;comment&quot;</span>, <span class="s">&quot;constraint&quot;</span>, <span class="s">&quot;decorate&quot;</span>, <span class="s">&quot;dir&quot;</span>, <span class="s">&quot;fontcolor&quot;</span>, <span class="s">&quot;fontname&quot;</span>, <span class="s">&quot;fontsize&quot;</span>, <span class="s">&quot;headlabel&quot;</span>, <span class="s">&quot;headport&quot;</span>, <span class="s">&quot;headURL&quot;</span>, <span class="s">&quot;label&quot;</span>, <span class="s">&quot;labelangle&quot;</span>, <span class="s">&quot;labeldistance&quot;</span>, <span class="s">&quot;labelfloat&quot;</span>, <span class="s">&quot;labelfontcolor&quot;</span>, <span class="s">&quot;labelfontname&quot;</span>, <span class="s">&quot;labelfontsize&quot;</span>, <span class="s">&quot;layer&quot;</span>, <span class="s">&quot;lhead&quot;</span>, <span class="s">&quot;ltail&quot;</span>, <span class="s">&quot;minlen&quot;</span>, <span class="s">&quot;samehead&quot;</span>, <span class="s">&quot;sametail&quot;</span>, <span class="s">&quot;style&quot;</span>, <span class="s">&quot;taillabel&quot;</span>, <span class="s">&quot;tailport&quot;</span>, <span class="s">&quot;tailURL&quot;</span>, <span class="s">&quot;weight&quot;</span>, <span class="s">&quot;id&quot;</span>]</code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="GRAPH_OPTS">
+        <strong>GRAPH_OPTS</strong> = <code>[<span class="s">&quot;bgcolor&quot;</span>, <span class="s">&quot;center&quot;</span>, <span class="s">&quot;clusterrank&quot;</span>, <span class="s">&quot;color&quot;</span>, <span class="s">&quot;comment&quot;</span>, <span class="s">&quot;compound&quot;</span>, <span class="s">&quot;concentrate&quot;</span>, <span class="s">&quot;fillcolor&quot;</span>, <span class="s">&quot;fontcolor&quot;</span>, <span class="s">&quot;fontname&quot;</span>, <span class="s">&quot;fontpath&quot;</span>, <span class="s">&quot;fontsize&quot;</span>, <span class="s">&quot;label&quot;</span>, <span class="s">&quot;labeljust&quot;</span>, <span class="s">&quot;labelloc&quot;</span>, <span class="s">&quot;layers&quot;</span>, <span class="s">&quot;margin&quot;</span>, <span class="s">&quot;mclimit&quot;</span>, <span class="s">&quot;nodesep&quot;</span>, <span class="s">&quot;nslimit&quot;</span>, <span class="s">&quot;nslimit1&quot;</span>, <span class="s">&quot;ordering&quot;</span>, <span class="s">&quot;orientation&quot;</span>, <span class="s">&quot;page&quot;</span>, <span class="s">&quot;rank&quot;</span>, <span class="s">&quot;rankdir&quot;</span>, <span class="s">&quot;ranksep&quot;</span>, <span class="s">&quot;ratio&quot;</span>, <span class="s">&quot;samplepoints&quot;</span>, <span class="s">&quot;searchsize&quot;</span>, <span class="s">&quot;size&quot;</span>, <span class="s">&quot;style&quot;</span>, <span class="s">&quot;URL&quot;</span>, <span class="s">&quot;layerseq&quot;</span>]</code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="NODE_OPTS">
+        <strong>NODE_OPTS</strong> = <code>[<span class="s">&quot;color&quot;</span>, <span class="s">&quot;comment&quot;</span>, <span class="s">&quot;distortion&quot;</span>, <span class="s">&quot;fillcolor&quot;</span>, <span class="s">&quot;fixedsize&quot;</span>, <span class="s">&quot;fontcolor&quot;</span>, <span class="s">&quot;fontname&quot;</span>, <span class="s">&quot;fontsize&quot;</span>, <span class="s">&quot;group&quot;</span>, <span class="s">&quot;height&quot;</span>, <span class="s">&quot;label&quot;</span>, <span class="s">&quot;layer&quot;</span>, <span class="s">&quot;orientation&quot;</span>, <span class="s">&quot;peripheries&quot;</span>, <span class="s">&quot;regular&quot;</span>, <span class="s">&quot;shape&quot;</span>, <span class="s">&quot;shapefile&quot;</span>, <span class="s">&quot;sides&quot;</span>, <span class="s">&quot;skew&quot;</span>, <span class="s">&quot;style&quot;</span>, <span class="s">&quot;URL&quot;</span>, <span class="s">&quot;width&quot;</span>, <span class="s">&quot;z&quot;</span>, <span class="s">&quot;bottomlabel&quot;</span>, <span class="s">&quot;bgcolor&quot;</span>, <span class="s">&quot;rank&quot;</span>, <span class="s">&quot;toplabel&quot;</span>]</code>
+      </dt>
+      
+    
+  </dl>
 
 
 

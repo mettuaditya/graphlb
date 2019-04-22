@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/mettuaditya/graphlb">
-  <title>Graphlb::Algorithms::BFS - github.com/mettuaditya/graphlb</title>
+  <title>Dot::AST::BlockToken - github.com/mettuaditya/graphlb</title>
 </head>
 <body>
 
@@ -41,17 +41,17 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/mettuaditya/graphlb/Dot" data-name="dot">
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Dot" data-name="dot">
       <a href="../../Dot.html">Dot</a>
       
         <ul>
   
-  <li class="parent " data-id="github.com/mettuaditya/graphlb/Dot/AST" data-name="dot::ast">
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Dot/AST" data-name="dot::ast">
       <a href="../../Dot/AST.html">AST</a>
       
         <ul>
   
-  <li class="parent " data-id="github.com/mettuaditya/graphlb/Dot/AST/BlockToken" data-name="dot::ast::blocktoken">
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Dot/AST/BlockToken" data-name="dot::ast::blocktoken">
       <a href="../../Dot/AST/BlockToken.html">BlockToken</a>
       
         <ul>
@@ -166,12 +166,12 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb" data-name="graphlb">
+  <li class="parent " data-id="github.com/mettuaditya/graphlb/Graphlb" data-name="graphlb">
       <a href="../../Graphlb.html">Graphlb</a>
       
         <ul>
   
-  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms" data-name="graphlb::algorithms">
+  <li class="parent " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms" data-name="graphlb::algorithms">
       <a href="../../Graphlb/Algorithms.html">Algorithms</a>
       
         <ul>
@@ -181,7 +181,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BFS" data-name="graphlb::algorithms::bfs">
+  <li class=" " data-id="github.com/mettuaditya/graphlb/Graphlb/Algorithms/BFS" data-name="graphlb::algorithms::bfs">
       <a href="../../Graphlb/Algorithms/BFS.html">BFS</a>
       
     </li>
@@ -335,25 +335,15 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Graphlb::Algorithms::BFS
+  <span class="kind">class</span> Dot::AST::BlockToken
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Graphlb/Algorithms/BFS.html">Graphlb::Algorithms::BFS</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Dot/AST/BlockToken.html">Dot::AST::BlockToken</a></li><li class="superclass"><a href="../../Dot/AST/Token.html">Dot::AST::Token</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
-
-  <h2>Overview</h2>
-
-  <p>Breadth first Search is an algorithm for finding
-all the vertices that are reachable from  a source,
-vertex in a graph.</p>
-
-<p>Given a graph and source vertex Breadth First Search finds
-the vertices that are reachable from the source vertex
-in a graph</p>
 
 
 
@@ -371,8 +361,8 @@ in a graph</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/algorithms/breadth_first_search.cr#L14" target="_blank">
-        graphlb/algorithms/breadth_first_search.cr
+      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/dot_parser/ast/block_token.cr#L4" target="_blank">
+        graphlb/dot_parser/ast/block_token.cr
       </a>
     
     <br/>
@@ -382,6 +372,16 @@ in a graph</p>
 
 
 
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28peg_tuple%3APegmatite%3A%3AToken%2Cstring%3AString%2Cid%3AString%2Cargs%3AString%2Cvalues%3AHash%28String%2CValueToken%29%2Cblocks%3AArray%28BlockToken%29%29-class-method" class="signature"><strong>.new</strong>(peg_tuple : Pegmatite::Token, string : String, id : String, args : String, values : Hash(String, ValueToken), blocks : Array(BlockToken))</a>
+        
+      </li>
+    
+  </ul>
+
 
 
 
@@ -390,16 +390,22 @@ in a graph</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#reachable%28graph%2Csource%29-instance-method" class="signature"><strong>#reachable</strong>(graph, source)</a>
-        
-          <div class="summary"><p>Given a graph and a Source vertex the BFS algorithm starts running from the sources vertex to find all the vertices that are reachable from the source vertex and the information about the previous node of all nodes</p></div>
+        <a href="#blocks%3AArray%28Dot%3A%3AAST%3A%3ABlockToken%29-instance-method" class="signature"><strong>#blocks</strong> : Array(Dot::AST::BlockToken)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#run%28graph%2Csource%29-instance-method" class="signature"><strong>#run</strong>(graph, source)</a>
+        <a href="#id%3AString-instance-method" class="signature"><strong>#id</strong> : String</a>
         
-          <div class="summary"><p>Given a graph and a Source vertex the BFS algorithm starts running from the sources vertex to find all the vertices that are visited from the source vertex.</p></div>
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#value-instance-method" class="signature"><strong>#value</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#values%3AHash%28String%2CDot%3A%3AAST%3A%3AValueToken%29-instance-method" class="signature"><strong>#values</strong> : Hash(String, Dot::AST::ValueToken)</a>
         
       </li>
     
@@ -410,6 +416,49 @@ in a graph</p>
 
 
 <div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="../../Dot/AST/Token.html">Dot::AST::Token</a></code></h3>
+  
+  
+    <a href="../../Dot/AST/Token.html#as_s-instance-method" class="tooltip">
+      <span>as_s</span>
+    as_s</a>, 
+    
+  
+    <a href="../../Dot/AST/Token.html#kind%3ASymbol-instance-method" class="tooltip">
+      <span>kind : Symbol</span>
+    kind</a>, 
+    
+  
+    <a href="../../Dot/AST/Token.html#string%3AString-instance-method" class="tooltip">
+      <span>string : String</span>
+    string</a>, 
+    
+  
+    <a href="../../Dot/AST/Token.html#value-instance-method" class="tooltip">
+      <span>value</span>
+    value</a>
+    
+  
+
+
+    
+
+  <h3>Constructor methods inherited from class <code><a href="../../Dot/AST/Token.html">Dot::AST::Token</a></code></h3>
+  
+  
+    <a href="../../Dot/AST/Token.html#new%28peg_tuple%3APegmatite%3A%3AToken%2Cstring%3AString%29-class-method" class="tooltip">
+      <span>new(peg_tuple : Pegmatite::Token, string : String)</span>
+    new</a>
+    
+  
+
+
+    
+
+
   
     
 
@@ -434,63 +483,91 @@ in a graph</p>
 </div>
 
 
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(peg_tuple:Pegmatite::Token,string:String,id:String,args:String,values:Hash(String,ValueToken),blocks:Array(BlockToken))-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(peg_tuple : Pegmatite::Token, string : String, id : String, args : String, values : Hash(String, <a href="../../Dot/AST/ValueToken.html">ValueToken</a>), blocks : Array(<a href="../../Dot/AST/BlockToken.html">BlockToken</a>))
+
+        <a class="method-permalink" href="#new%28peg_tuple%3APegmatite%3A%3AToken%2Cstring%3AString%2Cid%3AString%2Cargs%3AString%2Cvalues%3AHash%28String%2CValueToken%29%2Cblocks%3AArray%28BlockToken%29%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/dot_parser/ast/block_token.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
 
 
 
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="reachable(graph,source)-instance-method">
+    <div class="entry-detail" id="blocks:Array(Dot::AST::BlockToken)-instance-method">
       <div class="signature">
         
-        def <strong>reachable</strong>(graph, source)
+        def <strong>blocks</strong> : Array(<a href="../../Dot/AST/BlockToken.html">Dot::AST::BlockToken</a>)
 
-        <a class="method-permalink" href="#reachable%28graph%2Csource%29-instance-method">#</a>
+        <a class="method-permalink" href="#blocks%3AArray%28Dot%3A%3AAST%3A%3ABlockToken%29-instance-method">#</a>
       </div>
-      
-        <div class="doc"><p>Given a graph and a Source vertex the BFS algorithm starts running from the sources
-vertex to find all the vertices that are reachable from the source vertex and the
-information about the previous node of all nodes</p>
-
-<p>@param : graph, A graph on which the vertices are connected</p>
-
-<p>@param : Source, A source vertex where the algorithm starts</p>
-
-<p>@return : a tuple ([String]visited_nodes,[Hash]prev), visited nodes store the names
-of all the nodes that are reachable form the source vertex and prev stores the information
-about the previous nodes</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/algorithms/breadth_first_search.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/dot_parser/ast/block_token.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="run(graph,source)-instance-method">
+    <div class="entry-detail" id="id:String-instance-method">
       <div class="signature">
         
-        def <strong>run</strong>(graph, source)
+        def <strong>id</strong> : String
 
-        <a class="method-permalink" href="#run%28graph%2Csource%29-instance-method">#</a>
+        <a class="method-permalink" href="#id%3AString-instance-method">#</a>
       </div>
-      
-        <div class="doc"><p>Given a graph and a Source vertex the BFS algorithm starts running from the sources
-vertex to find all the vertices that are visited from the source vertex.</p>
-
-<p>The DFS algorithm uses Queue data-structure to find the next node to visit</p>
-
-<p>@param : graph, A graph on which the vertices are connected</p>
-
-<p>@param : Source, A source vertex where the algorithm starts</p>
-
-<p>@return : [string], An array of type string which contains all the node that are reachable form the source vertex</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/algorithms/breadth_first_search.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/dot_parser/ast/block_token.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="value-instance-method">
+      <div class="signature">
+        
+        def <strong>value</strong>
+
+        <a class="method-permalink" href="#value-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/dot_parser/ast/block_token.cr#L29" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="values:Hash(String,Dot::AST::ValueToken)-instance-method">
+      <div class="signature">
+        
+        def <strong>values</strong> : Hash(String, <a href="../../Dot/AST/ValueToken.html">Dot::AST::ValueToken</a>)
+
+        <a class="method-permalink" href="#values%3AHash%28String%2CDot%3A%3AAST%3A%3AValueToken%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/dot_parser/ast/block_token.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>

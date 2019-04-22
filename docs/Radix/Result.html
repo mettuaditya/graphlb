@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/mettuaditya/graphlb">
-  <title>Graphlb::DataStructures - github.com/mettuaditya/graphlb</title>
+  <title>Radix::Result(T) - github.com/mettuaditya/graphlb</title>
 </head>
 <body>
 
@@ -166,7 +166,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb" data-name="graphlb">
+  <li class="parent " data-id="github.com/mettuaditya/graphlb/Graphlb" data-name="graphlb">
       <a href="../Graphlb.html">Graphlb</a>
       
         <ul>
@@ -226,7 +226,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures" data-name="graphlb::datastructures">
+  <li class="parent " data-id="github.com/mettuaditya/graphlb/Graphlb/DataStructures" data-name="graphlb::datastructures">
       <a href="../Graphlb/DataStructures.html">DataStructures</a>
       
         <ul>
@@ -301,7 +301,7 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/mettuaditya/graphlb/Radix" data-name="radix">
+  <li class="parent open current" data-id="github.com/mettuaditya/graphlb/Radix" data-name="radix">
       <a href="../Radix.html">Radix</a>
       
         <ul>
@@ -311,7 +311,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/mettuaditya/graphlb/Radix/Result" data-name="radix::result(t)">
+  <li class=" current" data-id="github.com/mettuaditya/graphlb/Radix/Result" data-name="radix::result(t)">
       <a href="../Radix/Result.html">Result</a>
       
     </li>
@@ -335,20 +335,29 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">module</span> Graphlb::DataStructures
+  <span class="kind">class</span> Radix::Result(T)
 
 </h1>
 
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Radix/Result.html">Radix::Result(T)</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
 
   <h2>Overview</h2>
 
-  <p>In the module the we have defined the data-structures starting from the simple Node data-structure to a complex tree data-structure
-which will be used in many general graph algorithms to obtain efficient solutions.</p>
+  <p>A Result is the comulative output of walking our <a href="https://en.wikipedia.org/wiki/Radix_tree" target="_blank">Radix tree</a>
+<code><a href="../Radix/Tree.html">Radix::Tree</a></code> implementation.</p>
 
-<p>These are Just some of the basic data-structures and more data-structures will be added as we move between different algorithms.</p>
+<p>It provides helpers to retrieve the information obtained from walking
+our tree using <code><a href="../Radix/Tree.html#find%28path%3AString%29-instance-method">Radix::Tree#find</a></code></p>
+
+<p>This information can be used to perform actions in case of the <em>path</em>
+that was looked on the Tree was found.</p>
+
+<p>A Result is also used recursively by <code><a href="../Radix/Tree.html#find%28path%3AString%29-instance-method">Radix::Tree#find</a></code> when collecting
+extra information like <em>params</em>.</p>
 
 
 
@@ -366,50 +375,8 @@ which will be used in many general graph algorithms to obtain efficient solution
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/tree.cr#L1" target="_blank">
-        graphlb/data_structures/tree.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/binary_tree.cr#L7" target="_blank">
-        graphlb/data_structures/binary_tree.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/nodes.cr#L1" target="_blank">
-        graphlb/data_structures/nodes.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/queue.cr#L1" target="_blank">
-        graphlb/data_structures/queue.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/stack.cr#L1" target="_blank">
-        graphlb/data_structures/stack.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/undirectedgraph.cr#L3" target="_blank">
-        graphlb/data_structures/undirectedgraph.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/directedgraph.cr#L7" target="_blank">
-        graphlb/data_structures/directedgraph.cr
+      <a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/radix_tree.cr#L219" target="_blank">
+        graphlb/data_structures/radix_tree.cr
       </a>
     
     <br/>
@@ -422,6 +389,47 @@ which will be used in many general graph algorithms to obtain efficient solution
 
 
 
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#found%3F-instance-method" class="signature"><strong>#found?</strong></a>
+        
+          <div class="summary"><p>Returns whatever a <em>payload</em> was found by <code><a href="../Radix/Tree.html#find%28path%3AString%29-instance-method">Tree#find</a></code> and is part of the result.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key-instance-method" class="signature"><strong>#key</strong></a>
+        
+          <div class="summary"><p>Returns a String built based on the nodes used in the result</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#params-instance-method" class="signature"><strong>#params</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#payload-instance-method" class="signature"><strong>#payload</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#payload%3F-instance-method" class="signature"><strong>#payload?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#use%28node%3ARadix%3A%3ANode%28T%29%2Cpayload%3Dtrue%29-instance-method" class="signature"><strong>#use</strong>(node : Radix::Node(T), payload = <span class="n">true</span>)</a>
+        
+          <div class="summary"><p>Adjust result information by using the details of the given <code><a href="../Radix/Node.html">Node</a></code>.</p></div>
+        
+      </li>
+    
+  </ul>
 
 
 
@@ -429,12 +437,165 @@ which will be used in many general graph algorithms to obtain efficient solution
 
 <div class="methods-inherited">
   
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
 
 
 
 
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="found?-instance-method">
+      <div class="signature">
+        
+        def <strong>found?</strong>
+
+        <a class="method-permalink" href="#found%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns whatever a <em>payload</em> was found by <code><a href="../Radix/Tree.html#find%28path%3AString%29-instance-method">Tree#find</a></code> and is part of
+the result.</p>
+
+<pre><code>result <span class="o">=</span> <span class="t">Radix</span><span class="t">::</span><span class="t">Result</span>(<span class="t">Symbol</span>).<span class="k">new</span>
+result.found?
+<span class="c"># =&gt; false</span>
+
+root <span class="o">=</span> <span class="t">Radix</span><span class="t">::</span><span class="t">Node</span>(<span class="t">Symbol</span>).<span class="k">new</span>(<span class="s">&quot;/&quot;</span>, <span class="n">:root</span>)
+result.use(root)
+result.found?
+<span class="c"># =&gt; true</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/radix_tree.cr#L244" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key-instance-method">
+      <div class="signature">
+        
+        def <strong>key</strong>
+
+        <a class="method-permalink" href="#key-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns a String built based on the nodes used in the result</p>
+
+<pre><code>node1 <span class="o">=</span> <span class="t">Radix</span><span class="t">::</span><span class="t">Node</span>(<span class="t">Symbol</span>).<span class="k">new</span>(<span class="s">&quot;/&quot;</span>, <span class="n">:root</span>)
+node2 <span class="o">=</span> <span class="t">Radix</span><span class="t">::</span><span class="t">Node</span>(<span class="t">Symbol</span>).<span class="k">new</span>(<span class="s">&quot;about&quot;</span>, <span class="n">:about</span>)
+
+result <span class="o">=</span> <span class="t">Radix</span><span class="t">::</span><span class="t">Result</span>(<span class="t">Symbol</span>).<span class="k">new</span>
+result.use node1
+result.use node2
+
+result.key
+<span class="c"># =&gt; &quot;/about&quot;</span></code></pre>
+
+<p>When no node has been used, returns an empty String.</p>
+
+<pre><code>result <span class="o">=</span> <span class="t">Radix</span><span class="t">::</span><span class="t">Result</span>(<span class="t">Nil</span>).<span class="k">new</span>
+result.key
+<span class="c"># =&gt; &quot;&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/radix_tree.cr#L269" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="params-instance-method">
+      <div class="signature">
+        
+        def <strong>params</strong>
+
+        <a class="method-permalink" href="#params-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/radix_tree.cr#L222" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="payload-instance-method">
+      <div class="signature">
+        
+        def <strong>payload</strong>
+
+        <a class="method-permalink" href="#payload-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/radix_tree.cr#L231" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="payload?-instance-method">
+      <div class="signature">
+        
+        def <strong>payload?</strong>
+
+        <a class="method-permalink" href="#payload%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/radix_tree.cr#L227" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="use(node:Radix::Node(T),payload=true)-instance-method">
+      <div class="signature">
+        
+        def <strong>use</strong>(node : <a href="../Radix/Node.html">Radix::Node</a>(T), payload = <span class="n">true</span>)
+
+        <a class="method-permalink" href="#use%28node%3ARadix%3A%3ANode%28T%29%2Cpayload%3Dtrue%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adjust result information by using the details of the given <code><a href="../Radix/Node.html">Node</a></code>.</p>
+
+<ul><li>Collect <code><a href="../Radix/Node.html">Node</a></code> for future references.</li><li>Use <em>payload</em> if present.</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mettuaditya/graphlb/blob/20d0f1a6bae9c61d8e44179aaac11aae4131c853/src/graphlb/data_structures/radix_tree.cr#L283" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
 
 
 
