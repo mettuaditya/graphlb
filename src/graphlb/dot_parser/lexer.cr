@@ -52,8 +52,9 @@ module Dot
         value = t_null | bool | number | identifier | string
 
         # Define what an object is, in terms of zero or more key/value pairs.
-        pair = (identifier >> s >> char('=') >> s  >> value).named(:assignment)
-        pair_id = (identifier >> s >> char('=') >> s >> identifier)
+        pair = identifier >> s >> char('=') >> s  >> value
+        pair_id = identifier >> s >> char('=') >> s >> identifier
+        ass = (pair|pair_id).named(:assignment)
 
         # block_item = pair | block
         # block_item_list = block_item >> s >> (block_item >> s).repeat
@@ -66,17 +67,19 @@ module Dot
         # (identifier >> s >> block_args >> block_body).named(:block)
         # blocks = block >> s >> block.repeat
 
-        subgraph = str("graph") | str("digraph")
+        subgraph = (str("graph") | str("digraph")).named(:graph_type)
         a_list = pair_id >> char(',') >> (pair_id >> char(',')).maybe.repeat| pair >> char(',') >> (pair >> char(',')).maybe.repeat  | pair_id | pair
-        attr_list = char('[') >> a_list.maybe.repeat >> char(']')
-        node_statement = (identifier >> s >> char('[') >> attr_list >> char(']')) | identifier
-        edgeop = char('-') >> (char('>')| char('-'))
-        edgeRHS = edgeop >> s.maybe >> identifier >> ( s >> edgeop >> s.maybe >> identifier).repeat | edgeop >> s >> identifier
-        edge_statement = identifier >> s >> edgeRHS >> s >> char('[') >> attr_list >> char(']') | identifier >> s >> edgeRHS
-        attr_statement = identifier >> s >> attr_list
-        statement = s.maybe.repeat >> node_statement| s.maybe.repeat >> edge_statement | s.maybe.repeat >> attr_statement | s.maybe.repeat >> pair_id
+        attr_list = identifier >> s >>char('[') >> a_list.maybe.repeat >> char(']')
+        node_statement = (char('[') >> attr_list >> char(']')).named(:node_statement)
+        edgeop = (char('-') >> char('>'))| (char('-') >> char('-'))
+        edgeRHS = edgeop >> s.maybe >> identifier >> ( s >> edgeop >> s.maybe >> identifier).maybe.repeat
+        edge_statement = (identifier >> s >>edgeRHS >> s >> char('[') >> attr_list >> char(']') |identifier >> s >>edgeRHS).named(:edge_statement)
+        attr_statement = (identifier >> s >>attr_list).named(:attr_statement)
+        graph_name = identifier.named(:graph_name)
+        # statement = s.maybe.repeat >> node_statement| s.maybe.repeat >> edge_statement | s.maybe.repeat >> attr_statement | s.maybe.repeat >> pair_id).named(:statement)
+        statement = s.maybe.repeat >> (node_statement|edge_statement |attr_statement|ass).named(:statement)
         statement_list = statement >> char(';') >> s.maybe >> (statement >> char(';') >> s.maybe).maybe.repeat  | statement >> char(';') >> s.maybe
-        graph = subgraph >> s >> identifier >> s.maybe >> char('{') >> s.maybe.repeat >> statement_list >> char('}').named(:block)
+        graph = (subgraph >> s >> graph_name >> s.maybe >> char('{') >> s.maybe.repeat >> statement_list >> char('}')).named(:block)
 
         # An HCL document is an list or object with optional surrounding whitespace.
         (s >> graph >> s).then_eof
