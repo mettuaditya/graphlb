@@ -9,7 +9,7 @@ module Dot
         parts: Array(Value)
       )
 
-      def value
+      def value : ValueType
         {
           id: string,
           parts: parts_value

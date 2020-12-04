@@ -8,7 +8,7 @@ module Dot
         super(peg_tuple, stripped_string)
       end
 
-      def value
+      def value : ValueType
         if string.includes?('.')
           string.to_f64
         else
