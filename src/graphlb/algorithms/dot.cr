@@ -115,64 +115,40 @@ module Graphlb
         "layerseq"
     ]
 
-    class Undirected
-
-      def edge_link
-        "--"
-      end
-
-    end
-
-    class Directed
-
-      def edge_link
-        "->"
-      end
-
-    end
-
     class GraphDot
+      @graph : Graph
 
-      def initialize (graph)
-
-        if graph.is_a?(UndirectedGraph)
-          edgeclass = Dot::Undirected.new()
-        else
-          edgeclass = Dot::Directed.new()
-        end
-
-        tempfile = File.open("graphdot.dot",mode = "w")
-        if graph.is_a?(UndirectedGraph)
-          File.write(tempfile, "graph dotgraph { \n")
-        else
-          File.write(tempfile, "digraph dotgraph { \n")
-        end
-
-        vertex_set = graph.get_vertices
-        vertex_set.keys.each do |v|
-          if v.edges.nil? 
-            File.write(tempfile, v + "; \n" )
-          end
-          v.edges.keys.each do |u|
-            File.write(tempfile, v + edgeclass.edge_link + u + "[label=" +v.edges[u]+ "]; \n" )
-          end
-        end
-        File.write(tempfile, "} \n")
-
-        cmd = "dot -Tpng graphdot.dot > output.png"
-        run_cmd(cmd)
-        tempfile.delete
+      def initialize(@graph)
       end
 
-      def run_cmd(cmd)
-        stdout = IO::Memory.new
-        stderr = IO::Memory.new
-        status = Process.run(cmd, output: stdout, error: stderr)
-        if status.success?
-          {status.exit_code, stdout.to_s}
-        else
-          {status.exit_code, stderr.to_s}
+      def to_s(io : IO)
+        digraph = @graph.is_a?(DirectedGraph)
+        io << "di" if digraph
+        io << "graph dotgraph {\n"
+
+        link = digraph ? "->" : "--"
+        existing_nodes = Set({Node,Node}).new
+        @graph.vertices.each do |v|
+          if v.edges.empty?
+            io << v.name << ";\n"
+          else
+            v.edges.each do |u, weight|
+              unless digraph
+                next if existing_nodes.includes?({u, v})
+
+                existing_nodes << {v,u}
+              end
+              io << v.name << link << u.name << " [label=" << weight << "];\n"
+            end
+          end
         end
+        io << "}\n"
+      end
+
+      def save_png(file_name : Path | String) : Nil
+        dot = Process.new(command: "dot", args: ["-Tpng", "-o#{file_name}"], input: :pipe, error: :pipe)
+        to_s(dot.input)
+        raise dot.error.gets_to_end unless dot.wait.success?
       end
     end
   end
