@@ -1,7 +1,7 @@
 require "./token.cr"
 module Dot
   module AST
-    class BlockToken < Token
+    class BlockToken < ValueToken
       getter :id, :values, :blocks
 
       alias Value = NamedTuple(
@@ -26,7 +26,7 @@ module Dot
         @blocks = blocks
       end
 
-      def value
+      def value : ValueType
         {
           id: id,
           args: args.map { |arg| arg.value },

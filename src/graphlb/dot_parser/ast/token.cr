@@ -14,8 +14,6 @@ module Dot
       def as_s
         string
       end
-
-      abstract def value
     end
   end
 end

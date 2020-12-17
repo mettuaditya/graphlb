@@ -11,7 +11,7 @@ module Dot
         STRING_VAL
       end
 
-      def value
+      def value : ValueType
         nil
       end
     end

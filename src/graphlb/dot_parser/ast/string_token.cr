@@ -1,7 +1,7 @@
 module Dot
   module AST
     class StringToken < ValueToken
-      def value
+      def value : ValueType
         string
       end
     end
