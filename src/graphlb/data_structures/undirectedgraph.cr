@@ -8,29 +8,7 @@ module Graphlb::DataStructures
   # Associated to each edge. Here we are using the adjacency list approach to define a undirected graph which
   # can be modified later as per convience
   #
-  class UnDirectedGraph
-
-    # All the vertices of the graph are stored in this variables
-    getter vertices
-
-    # creats a graph whith no vertices and edges(empty-graph)
-    def initialize
-      @vertices = [] of Node
-    end
-
-    # Creates a new vertex with in the graph.
-    #
-    # The vertex name is expected to be unique to differentiate between the vertex within the graph
-    # and perform operations on them.
-    #
-    # @param [String] name, to define the name of the vertex hwich is expected to be unique.
-    #
-    # @return [Vertex] newly created node.
-    def add_vertex(name)
-      temp = Node.new(name)
-      @vertices << temp
-      return temp
-    end
+  class UnDirectedGraph < Graph
 
     # Creates an edge between the nodes provided as the parametes.
     #
