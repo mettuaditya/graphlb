@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mettuaditya/graphlb.svg?branch=master)](https://travis-ci.org/mettuaditya/graphlb)
+<!-- [![Build Status](https://travis-ci.org/mettuaditya/graphlb.svg?branch=master)](https://travis-ci.org/mettuaditya/graphlb) -->
 # graphlb
 graphlb is a crystal library which contains all the graph datastructures and algorithms in crystal-lang.
 
